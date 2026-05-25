@@ -281,36 +281,83 @@ a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
 }
 
 /* ============================================================
-   AKT 5 — price convergence chart
+   AKT 5 — per-kategori-grid
    ============================================================ */
-.price-chart .price-line {
-  fill: none;
-  stroke-width: 2.5;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-dasharray: 1200;
-  stroke-dashoffset: 1200;
-  transition: stroke-dashoffset 1.8s ease;
+.price-grid .chart-subtitle {
+  font-family: var(--sans);
+  font-size: 11px;
+  fill: var(--ink-soft);
 }
-.price-chart.is-active .price-line { stroke-dashoffset: 0; }
 
-.price-chart .price-conv { stroke: var(--accent-red); }
-.price-chart .price-eko { stroke: var(--accent-green); }
+.price-grid .cell {
+  transition: opacity 0.5s ease;
+}
+.price-grid .cell.is-dimmed { opacity: 0.3; }
 
-.price-chart .now-line {
+.price-grid .cell-bg {
+  fill: #fdfcf9;
+  stroke: var(--rule);
+  stroke-width: 1;
+  rx: 4;
+  transition: stroke 0.4s ease, stroke-width 0.4s ease;
+}
+.price-grid .cell.is-highlighted .cell-bg {
+  stroke: var(--ink-soft);
+  stroke-width: 1.8;
+}
+
+.price-grid .cell-title {
+  font-family: var(--serif);
+  font-size: 13px;
+  font-weight: 600;
+  fill: var(--ink);
+}
+
+.price-grid .cell-badge {
+  font-family: var(--sans);
+  font-size: 9.5px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.price-grid .cell-badge-narrow { fill: var(--accent-amber); }
+.price-grid .cell-badge-close  { fill: var(--accent-green); }
+.price-grid .cell-badge-widen  { fill: var(--accent-red); }
+
+.price-grid .cell-x-label {
+  font-family: var(--sans);
+  font-size: 9.5px;
+  fill: var(--ink-soft);
+}
+
+.price-grid .cell-baseline {
+  stroke: var(--rule);
+  stroke-width: 1;
+}
+.price-grid .cell-now-line {
   stroke: var(--ink-soft);
   stroke-width: 1;
   stroke-dasharray: 3 3;
-  opacity: 0.6;
+  opacity: 0.5;
 }
 
-.price-chart .gap-bracket {
-  stroke: var(--ink-soft);
-  stroke-width: 1;
+.price-grid .line {
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
+  transition: stroke-dashoffset 1.4s ease;
 }
+.price-grid.is-active .line { stroke-dashoffset: 0; }
 
-.price-chart .series-conv { fill: var(--accent-red); }
-.price-chart .series-eko { fill: var(--accent-green); }
+.price-grid .line-conv { stroke: var(--accent-red); }
+.price-grid .line-eko  { stroke: var(--accent-green); }
+
+.price-grid .legend-conv-line { stroke: var(--accent-red); stroke-width: 2; }
+.price-grid .legend-eko-line  { stroke: var(--accent-green); stroke-width: 2; }
+.price-grid .legend-now-line  { stroke: var(--ink-soft); stroke-width: 1; stroke-dasharray: 2 2; }
 
 .steps {
   padding: 0 2rem;
@@ -731,7 +778,7 @@ footer {
 
   /* Charts: visa direkt i fullt utritat läge */
   .storage-chart .storage-line,
-  .price-chart .price-line { stroke-dashoffset: 0; }
+  .price-grid .line { stroke-dashoffset: 0; }
   .hormuz-map .route { stroke-dashoffset: 0; opacity: 1; }
   .hormuz-map .route-label { opacity: 1; }
   .counters { opacity: 1; }

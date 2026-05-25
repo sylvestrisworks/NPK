@@ -143,6 +143,18 @@ Källor:
 
 **Justering vs Grundbulten:** Grundbulten skriver *"Deras produktionskostnader påverkas därför inte alls lika extremt"*. Det är delvis fel — eko är mindre exponerat mot NPK direkt, men exponering mot diesel, transport och foderpriser är fortfarande betydande. Konvergens är trolig men inte fullständig.
 
+**Kategoriserad utblick (vad sajten visar):**
+
+| Kategori | Förväntad rörelse | Mekanism |
+|---|---|---|
+| Spannmål · baljväxter | Gapet krymper | Konv stort NPK-beroende; eko bär det internt via växtföljd och kvävefixerande baljväxter |
+| Mejeri · kött (via foder) | Gapet krymper | Foderkostnad ~50–70 % av produktionskostnaden; transmissionsfördröjning 9–18 mån via djurens cykel |
+| Frilandsgrönt · rotfrukter (säsong) | Gapet kan nästan stänga | Konv hög NPK-exponering; eko lågenergi-odling i öppen mark |
+| Växthusgrönt | Gapet kan vidgas | Uppvärmning dominerar kostnadsbilden; eko har högre energiåtgång per enhet |
+| Importerad eko-frukt | Gapet kan vidgas | Transport + kylkedja äter upp eko-fördelen i odlingen |
+
+**Crossing-frågan:** Den starka versionen — eko blir absolut billigare än konventionellt — är inte väl belagd. Konvergens är trolig på flera kategorier; crossing är möjligt punktvis men inte huvudregeln.
+
 ---
 
 ## 10. Historisk parallell — 2021–2023-chocken

@@ -193,12 +193,33 @@
   }
 
   // ------------------------------------------------------------
-  // AKT 5 — Pris-konvergens-graf
+  // AKT 5 — Per-kategori-grid
   // ------------------------------------------------------------
   function handleAkt5(num, phase) {
     if (phase !== 'enter') return;
-    const chart = document.querySelector('.price-chart');
-    if (chart && num === '1') chart.classList.add('is-active');
+    const grid = document.querySelector('.price-grid');
+    if (!grid) return;
+    if (num === '1') grid.classList.add('is-active');
+
+    // Vilka kategorier som ska lyftas fram per step
+    const focus = {
+      '1': null,                                        // intro — inget specifikt
+      '2': ['spannmal', 'mejeri', 'friland'],          // ekos styrkeområden
+      '3': null,                                        // nyans-läge
+      '4': ['spannmal', 'mejeri', 'friland'],          // gapet krymper
+      '5': ['vaxthus', 'import'],                       // gapet vidgas
+      '6': null,                                        // sammanfattning
+      '7': null                                         // tre kanaler — vi släpper kategorierna
+    };
+    const cells = grid.querySelectorAll('.cell');
+    const focused = focus[num];
+    cells.forEach(cell => {
+      cell.classList.remove('is-highlighted', 'is-dimmed');
+      if (!focused) return;
+      const cat = (cell.classList.value.match(/cell-(\w+)/) || [])[1];
+      if (focused.includes(cat)) cell.classList.add('is-highlighted');
+      else cell.classList.add('is-dimmed');
+    });
   }
 
   // ============================================================

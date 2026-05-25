@@ -80,17 +80,18 @@ Vänta tills publiken ser hela hero-sidan, scrolla sedan in i Akt 1.
 
 ---
 
-## Akt 5 · Vad det betyder för oss (4 min)
+## Akt 5 · Vad det betyder för oss (5 min)
 
-**Skärm:** Två linjer (konv vs eko) som närmar sig varandra. Sedan en lista med tre transmissionsvägar.
+**Skärm:** Fem små grafer i ett rutnät — en per kategori (spannmål, mejeri, frilandsgrönt, växthus, importerad eko). Etiketter markerar om gapet *krymper, stänger eller vidgas*. Markerade kategorier lyfts fram per step.
 
 **Du säger:**
-- *Step 1:* "Konventionellt jordbruk är direkt exponerat. Spannmål, grönsaker, mjölk och kött — allt det vi köper i ton-volymer — följer med när NPK blir dyrare. Urea i mars var det dyraste på fyra år."
-- *Step 2:* "Eko får enligt regelverk inte använda syntetiskt NPK. Det är ekos huvudsakliga skydd."
-- *Step 3:* "**Men eko är inte immunt.** Diesel, transport, växthusvärme, foder från konventionella odlare. Jordbruksdiesel är upp 46 % sedan februari."
-- *Step 4:* "Prisgapet krymper kraftigt. På vissa kategorier försvinner det. Eko blir relativt billigare än det varit."
-- *Step 5 (emphasis):* "Den klassiska upphandlingslogiken — 'eko är dyrare, så vi tar konventionellt där vi kan' — håller inte i det här scenariot. Vi behöver göra om räkneövningen."
-- *Step 6 (tre kanaler):* "Och det är därför genomslaget blir så starkt: energichocken slår genom via tre parallella kanaler samtidigt. Insatsvarukanalen — gas blir gödsel. Bränslekanalen — olja blir diesel. Förädlingskanalen — gas och el blir torkning, mejeri, kyla. Vi möter prishöjningar på varje led."
+- *Step 1:* "Konventionellt jordbruk är direkt exponerat. Spannmål, grönsaker, mjölk och kött — allt vi köper i ton-volymer — följer med när NPK blir dyrare. Urea i mars var det dyraste på fyra år."
+- *Step 2 (eko som kretslopp):* "Ekologiskt jordbruk är byggt kring något annat — kretslopp i stället för insatsvaror. Inget syntetiskt NPK. Bördighet byggs upp med växtföljd, baljväxter som biologiskt fixerar kväve direkt ur luften, stallgödsel och kompost. Det är en gårdsekonomi som producerar sin egen näring istället för att köpa den från en global energimarknad — och därför rör sig ekos kostnadsbild långsammare när gas och olja rusar."
+- *Step 3 (nyans):* "Men eko är inte immunt — och inte på samma sätt överallt. Diesel, transport, växthusvärme, foder, stallgödseltillgång. Jordbruksdiesel är upp 46 % sedan februari. Frågan är därför kategori för kategori: *var bär kretsloppslogiken, och var bryter den?*"
+- *Step 4 (där gapet krymper):* "På spannmål, baljväxter, mejeri, kött och frilandsgrönt har eko sin styrka. NPK är en stor andel av konventionella kostnader, och eko bär den biten internt. **Gapet krymper — på frilandsgrönt och rotfrukter kan det nästan stänga.** Men crossing — att eko blir absolut billigare — är osannolikt generellt. Vi pratar konvergens, inte överkörning."
+- *Step 5 (där gapet vidgas):* "Och här är det viktiga: i växthus dominerar uppvärmning kostnadsbilden. Eko har inget skydd där — snarare högre energiåtgång per producerad enhet. På importerad eko-frukt äter transport- och kylkostnader upp eko-fördelen. *Här kan gapet tvärtom vidgas.*"
+- *Step 6 (emphasis):* "Den klassiska upphandlingslogiken — 'eko är dyrare, så vi tar konventionellt där vi kan' — håller inte rakt av. Men crossing är inte heller huvudregeln. **Räkneövningen behöver göras om — kategori för kategori.**"
+- *Step 7 (tre kanaler):* "Och det är därför konv hamnar i kläm samtidigt på flera sätt: energichocken slår genom via tre parallella kanaler. Insatsvarukanalen — gas blir gödsel. Bränslekanalen — olja blir diesel. Förädlingskanalen — gas och el blir torkning, mejeri, kyla. Eko skyddas mot den första kanalen men inte mot de andra två."
 
 ---
 
@@ -123,6 +124,7 @@ Avsluta med: "Det vi behöver besluta idag är inte vad vi gör — utan att vi 
 | "Vad om Hormuz öppnas snabbt?" | "Bra för transportkostnaden, men infrastrukturen är skadad — Qatar tappar ~120 bcm LNG-kapacitet 2026–2030. Pristrycket lättar inte fullt ut." |
 | "Är 2022-parallellen verkligen relevant?" | "Nedsidan är att vi nu har lägre lager och en utbudssida som tar två år extra att laga. Uppsidan är att vi vet hur kedjan rör sig och hur snabbt." |
 | "Vad om eko inte räcker till?" | "Det är en valid risk — eko-utbudet är inte oändligt. Därför är *tidiga* avtal viktiga. Den som hör av sig först får priset." |
+| "Säger ni att eko blir billigare än konventionellt?" | "Nej. Vi säger att gapet krymper, och på vissa kategorier — frilandsgrönt, rotfrukter — kan det nästan stänga. På växthus och importerad eko kan det tvärtom vidgas. Vi pratar konvergens, kategori för kategori — inte att eko 'vinner'." |
 
 **Avsluta:** "Sammanfattningsvis: två och en halv månad in i en oljekris, sex till tolv månader från konsumentprispåslag, två år från att utbudet stabiliseras. Vi behöver inte få allt rätt idag, men vi behöver börja räkna nu. Frågor?"
 
