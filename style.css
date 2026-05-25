@@ -1,0 +1,739 @@
+/* ============================================================
+   NPK — Scrollytelling
+   Editorial typografi, sticky-graphic + steps-layout
+   ============================================================ */
+
+:root {
+  --bg: #faf8f4;
+  --bg-warm: #f0ece2;
+  --ink: #1c1c1a;
+  --ink-soft: #4a4a47;
+  --rule: #d8d3c6;
+  --accent-green: #3f6b3f;
+  --accent-red: #b1442c;
+  --accent-amber: #c98a2a;
+  --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --measure: 36rem;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 18px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (min-width: 1200px) {
+  html, body { font-size: 19px; }
+}
+
+h1, h2, h3 {
+  font-family: var(--serif);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 0 0 0.6em 0;
+  line-height: 1.15;
+}
+
+h2 { font-size: clamp(2rem, 4vw, 3.2rem); }
+h3 { font-size: 1.4rem; }
+
+p { margin: 0 0 1em 0; max-width: var(--measure); }
+em { font-style: italic; }
+strong { font-weight: 700; }
+
+.kicker, .act-num {
+  font-family: var(--sans);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--ink-soft);
+  margin: 0 0 1em 0;
+}
+
+a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+
+/* ============================================================
+   HERO (Akt 0)
+   ============================================================ */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 4rem 8vw;
+  background:
+    radial-gradient(ellipse at top right, rgba(63, 107, 63, 0.08), transparent 60%),
+    radial-gradient(ellipse at bottom left, rgba(177, 68, 44, 0.06), transparent 55%),
+    var(--bg);
+  position: relative;
+}
+
+.hero-inner { max-width: 50rem; }
+
+.hero-title {
+  font-size: clamp(3rem, 8vw, 6.5rem);
+  font-weight: 700;
+  line-height: 1.02;
+  margin: 0 0 1.5rem 0;
+  letter-spacing: -0.025em;
+}
+
+.hero-lede {
+  font-size: clamp(1.15rem, 1.6vw, 1.5rem);
+  line-height: 1.5;
+  color: var(--ink-soft);
+  max-width: 44rem;
+  margin-bottom: 3rem;
+}
+
+.hero-cue {
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.2rem;
+  color: var(--ink-soft);
+  animation: bob 2.2s ease-in-out infinite;
+}
+
+@keyframes bob {
+  0%, 100% { transform: translate(-50%, 0); opacity: 0.6; }
+  50% { transform: translate(-50%, 8px); opacity: 1; }
+}
+
+/* ============================================================
+   ACT (delad layout för Akt 1-5)
+   ============================================================ */
+.act {
+  padding: 8rem 0 4rem;
+  border-top: 1px solid var(--rule);
+}
+
+.act-intro {
+  padding: 0 8vw;
+  max-width: 60rem;
+  margin: 0 auto 4rem;
+}
+
+.act-blurb {
+  font-size: clamp(1.15rem, 1.5vw, 1.4rem);
+  color: var(--ink-soft);
+  line-height: 1.45;
+  max-width: 40rem;
+}
+
+/* ============================================================
+   SCROLLYTELLING — sticky graphic + steps
+   ============================================================ */
+.scrolly {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  padding: 0 4vw;
+  max-width: 100rem;
+  margin: 0 auto;
+  position: relative;
+}
+
+.graphic {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.graphic-inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.graphic svg {
+  width: 100%;
+  height: auto;
+  max-height: 70vh;
+}
+
+.placeholder-text {
+  font-family: var(--sans);
+  fill: var(--ink-soft);
+  font-size: 14px;
+}
+
+/* ============================================================
+   Charts — gemensamma stilar
+   ============================================================ */
+.chart-title {
+  font-family: var(--serif);
+  font-size: 16px;
+  font-weight: 700;
+  fill: var(--ink);
+}
+
+.chart-row-label, .series-label {
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 500;
+  fill: var(--ink-soft);
+  letter-spacing: 0.05em;
+}
+
+.chart-footnote {
+  font-family: var(--sans);
+  font-size: 11px;
+  fill: var(--ink-soft);
+  font-style: italic;
+}
+
+.axis-label, .legend-label {
+  font-family: var(--sans);
+  font-size: 11px;
+  fill: var(--ink-soft);
+}
+
+.gridlines line { stroke: var(--rule); stroke-width: 0.5; }
+.gridlines line.baseline { stroke: var(--ink-soft); stroke-width: 1; }
+
+/* ============================================================
+   AKT 2 — flow chart
+   ============================================================ */
+.flow-chart .bar-row .seg {
+  transition: width 1.4s cubic-bezier(0.2, 0.7, 0.2, 1), x 1.4s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.flow-chart .seg-ruby { fill: var(--accent-red); }
+.flow-chart .seg-canada { fill: #6b8aa3; }
+.flow-chart .seg-mena { fill: var(--accent-amber); }
+.flow-chart .seg-rest { fill: #b8b3a4; }
+
+/* ============================================================
+   AKT 4 — storage chart
+   ============================================================ */
+.storage-chart .storage-line {
+  fill: none;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 1200;
+  stroke-dashoffset: 1200;
+  transition: stroke-dashoffset 1.6s ease;
+}
+.storage-chart.is-active .storage-line { stroke-dashoffset: 0; }
+
+.storage-chart .storage-2025 { stroke: #b8b3a4; }
+.storage-chart .storage-2026 { stroke: var(--accent-red); stroke-width: 3; }
+.storage-chart .storage-2026-proj { stroke-dasharray: 6 5; opacity: 0.6; }
+
+.storage-chart .target-line {
+  stroke: var(--accent-green);
+  stroke-width: 1.2;
+  stroke-dasharray: 4 4;
+}
+
+.storage-chart .target-label, .series-label {
+  font-family: var(--sans);
+  font-size: 11px;
+  fill: var(--ink-soft);
+}
+
+.storage-chart .series-2025 { fill: #8a8580; }
+
+.storage-chart .now-marker {
+  fill: var(--accent-red);
+  stroke: var(--bg);
+  stroke-width: 2;
+}
+
+.storage-chart .now-label {
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 600;
+  fill: var(--accent-red);
+}
+.storage-chart .now-sublabel {
+  font-family: var(--sans);
+  font-size: 10px;
+  fill: var(--ink-soft);
+}
+
+/* ============================================================
+   AKT 5 — price convergence chart
+   ============================================================ */
+.price-chart .price-line {
+  fill: none;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 1200;
+  stroke-dashoffset: 1200;
+  transition: stroke-dashoffset 1.8s ease;
+}
+.price-chart.is-active .price-line { stroke-dashoffset: 0; }
+
+.price-chart .price-conv { stroke: var(--accent-red); }
+.price-chart .price-eko { stroke: var(--accent-green); }
+
+.price-chart .now-line {
+  stroke: var(--ink-soft);
+  stroke-width: 1;
+  stroke-dasharray: 3 3;
+  opacity: 0.6;
+}
+
+.price-chart .gap-bracket {
+  stroke: var(--ink-soft);
+  stroke-width: 1;
+}
+
+.price-chart .series-conv { fill: var(--accent-red); }
+.price-chart .series-eko { fill: var(--accent-green); }
+
+.steps {
+  padding: 0 2rem;
+}
+
+.step {
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4rem 0;
+  opacity: 0.35;
+  transition: opacity 0.4s ease;
+}
+
+.step.is-active { opacity: 1; }
+
+.step h3 { margin-bottom: 0.4em; color: var(--accent-green); }
+
+.step p { font-size: 1.15rem; }
+
+.step .emphasis {
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 1.4;
+  padding-left: 1.2rem;
+  border-left: 3px solid var(--accent-red);
+}
+
+.step .channels {
+  list-style: none;
+  padding: 0;
+  margin: 1.2em 0 1em;
+}
+
+.step .channels li {
+  padding: 0.8em 0 0.8em 1.4em;
+  border-left: 2px solid var(--accent-green);
+  margin-bottom: 0.8em;
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+.step .channels strong { color: var(--accent-green); }
+.step .channels em { color: var(--ink-soft); font-size: 0.95em; }
+
+.step .footnote {
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  margin-top: 1.5em;
+}
+
+/* ============================================================
+   AKT 1 — NPK letters
+   ============================================================ */
+.npk-stage {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.npk-letter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.5s ease;
+  opacity: 0.3;
+}
+
+.npk-letter.is-highlighted {
+  opacity: 1;
+  transform: scale(1.15);
+}
+
+.npk-letter span {
+  font-family: var(--serif);
+  font-size: clamp(4rem, 10vw, 8rem);
+  font-weight: 700;
+  line-height: 1;
+  color: var(--accent-green);
+}
+
+.npk-letter em {
+  font-family: var(--sans);
+  font-style: normal;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--ink-soft);
+}
+
+/* ============================================================
+   AKT 3 — Hormuz map
+   ============================================================ */
+.hormuz-map {
+  max-width: 100%;
+  max-height: 60vh;
+}
+
+.hormuz-map .water { fill: #d8e3eb; }
+.hormuz-map .water-deep { fill: #c4d4dd; }
+
+.hormuz-map .land {
+  fill: #eae4d4;
+  stroke: #cfc8b6;
+  stroke-width: 1;
+}
+
+.hormuz-map .map-label {
+  font-family: var(--sans);
+  font-size: 11px;
+  fill: var(--ink-soft);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.hormuz-map .port {
+  fill: var(--accent-green);
+  transition: r 0.5s ease, fill 0.5s ease;
+}
+
+.hormuz-map .port-label {
+  font-family: var(--sans);
+  font-size: 11px;
+  fill: var(--ink);
+  font-weight: 500;
+}
+
+.hormuz-map .strait-ring {
+  fill: none;
+  stroke: var(--ink-soft);
+  stroke-width: 1.5;
+  stroke-dasharray: 4 3;
+  transition: stroke 0.5s ease, stroke-width 0.5s ease;
+}
+
+.hormuz-map .strait-ring.is-active {
+  stroke: var(--accent-red);
+  stroke-width: 2.5;
+}
+
+.hormuz-map .strait-label {
+  font-family: var(--sans);
+  font-size: 12px;
+  fill: var(--ink);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.hormuz-map .route {
+  fill: none;
+  stroke: var(--accent-green);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-dasharray: 1500;
+  stroke-dashoffset: 1500;
+  opacity: 0;
+  transition: stroke-dashoffset 1.6s ease, stroke 0.6s ease, opacity 0.6s ease;
+}
+
+.hormuz-map .route.is-drawn {
+  stroke-dashoffset: 0;
+  opacity: 1;
+}
+
+.hormuz-map .route.is-blocked {
+  stroke: var(--accent-red);
+  opacity: 0.45;
+  stroke-dasharray: 6 6;
+  stroke-dashoffset: 0;
+  animation: blocked-drift 3s linear infinite;
+}
+
+.hormuz-map .route.is-pulsing {
+  animation: route-pulse 0.9s ease-in-out 2;
+}
+
+@keyframes route-pulse {
+  0%, 100% { opacity: 0.45; }
+  50% { opacity: 0.9; stroke-width: 4; }
+}
+
+@keyframes blocked-drift {
+  to { stroke-dashoffset: -24; }
+}
+
+.hormuz-map .route-label {
+  font-family: var(--sans);
+  font-size: 11px;
+  fill: var(--ink-soft);
+  font-weight: 500;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.hormuz-map .route-label.is-visible { opacity: 1; }
+
+.hormuz-map .closure-marker {
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.hormuz-map .closure-marker.is-visible { opacity: 1; }
+
+.hormuz-map .closure-ring {
+  fill: none;
+  stroke: var(--accent-red);
+  stroke-width: 3;
+}
+
+.hormuz-map .closure-cross {
+  stroke: var(--accent-red);
+  stroke-width: 3;
+  stroke-linecap: round;
+}
+
+.hormuz-map .closure-stamp {
+  opacity: 0;
+  transition: opacity 0.6s ease 0.3s;
+}
+
+.hormuz-map .closure-stamp.is-visible { opacity: 1; }
+
+.hormuz-map .closure-stamp-text {
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  fill: var(--accent-red);
+}
+
+/* ============================================================
+   AKT 3 — Hormuz counters
+   ============================================================ */
+.counters {
+  display: flex;
+  gap: 2.2rem;
+  margin-top: 1.5rem;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.counters.is-revealed { opacity: 1; }
+
+.counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.counter .num {
+  font-family: var(--serif);
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 700;
+  color: var(--accent-red);
+  line-height: 1;
+}
+
+.counter .unit {
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  color: var(--accent-red);
+  margin-left: 0.1em;
+}
+
+.counter .label {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-soft);
+  margin-top: 0.5rem;
+  max-width: 10rem;
+  text-align: center;
+}
+
+/* ============================================================
+   AKT 6 — Recommendations
+   ============================================================ */
+.recommendations {
+  padding: 8rem 8vw 6rem;
+  background: var(--bg-warm);
+  border-top: 1px solid var(--rule);
+}
+
+.rec-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 2.5rem;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.rec-card {
+  background: var(--bg);
+  padding: 2rem;
+  border: 1px solid var(--rule);
+}
+
+.rec-card h3 {
+  color: var(--accent-green);
+  margin-bottom: 1rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.rec-card ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  font-size: 0.98rem;
+  line-height: 1.55;
+}
+
+.rec-card li { margin-bottom: 0.7em; }
+.rec-card li:last-child { margin-bottom: 0; }
+
+/* ============================================================
+   AKT 7 — Källor & motargument
+   ============================================================ */
+.footer-section {
+  padding: 6rem 8vw 4rem;
+  border-top: 1px solid var(--rule);
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+.nuance {
+  border-bottom: 1px solid var(--rule);
+  padding: 1rem 0;
+}
+
+.nuance summary {
+  cursor: pointer;
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: 1.05rem;
+  padding: 0.5rem 0;
+  list-style: none;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.nuance summary::before {
+  content: "+";
+  position: absolute;
+  left: 0;
+  font-weight: 700;
+  color: var(--accent-green);
+  transition: transform 0.2s ease;
+}
+
+.nuance[open] summary::before { content: "−"; }
+
+.nuance p {
+  padding: 0.5rem 0 1rem 1.5rem;
+  color: var(--ink-soft);
+}
+
+.sources-note {
+  margin-top: 2rem;
+  font-family: var(--sans);
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+}
+
+code {
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.92em;
+  background: var(--bg-warm);
+  padding: 0.1em 0.4em;
+  border-radius: 3px;
+}
+
+/* ============================================================
+   Footer
+   ============================================================ */
+footer {
+  padding: 3rem 8vw;
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  border-top: 1px solid var(--rule);
+  text-align: center;
+}
+
+/* ============================================================
+   Responsive
+   ============================================================ */
+@media (max-width: 900px) {
+  .scrolly {
+    grid-template-columns: 1fr;
+  }
+  .graphic {
+    height: 60vh;
+    top: 20vh;
+  }
+  .step { min-height: 70vh; }
+  .hero { padding: 3rem 6vw; }
+}
+
+/* ============================================================
+   Reduced motion
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .step { opacity: 1; }
+  .scroll-indicator { display: none; }
+
+  /* Charts: visa direkt i fullt utritat läge */
+  .storage-chart .storage-line,
+  .price-chart .price-line { stroke-dashoffset: 0; }
+  .hormuz-map .route { stroke-dashoffset: 0; opacity: 1; }
+  .hormuz-map .route-label { opacity: 1; }
+  .counters { opacity: 1; }
+  .npk-letter { opacity: 1; }
+}

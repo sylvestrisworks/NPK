@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Från fossil energi till matpris — transmissionskedjan</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: #f5f3ef;
+    color: #1a252f;
+    margin: 0;
+    padding: 32px 20px;
+    line-height: 1.55;
+  }
+  .wrap { max-width: 1100px; margin: 0 auto; }
+  h1 {
+    font-size: 28px;
+    margin: 0 0 8px;
+    letter-spacing: -0.01em;
+  }
+  .lede {
+    font-size: 16px;
+    color: #555;
+    margin: 0 0 28px;
+    max-width: 780px;
+  }
+  .diagram {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    margin-bottom: 28px;
+  }
+  svg { width: 100%; height: auto; display: block; }
+
+  .node {
+    cursor: pointer;
+    transition: opacity 0.2s, transform 0.2s;
+    transform-origin: center;
+    transform-box: fill-box;
+  }
+  .node:hover { opacity: 0.85; }
+  .node.active rect { stroke: #1a252f; stroke-width: 3; }
+  .panel {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px 28px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    margin-bottom: 16px;
+  }
+  .panel h2 {
+    font-size: 19px;
+    margin: 0 0 10px;
+    color: #1a252f;
+  }
+  .panel h3 {
+    font-size: 14px;
+    margin: 16px 0 6px;
+    color: #7b241c;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-weight: 600;
+  }
+  .panel p, .panel li { font-size: 15px; }
+  .panel ul { margin: 6px 0 0; padding-left: 20px; }
+  .panel li { margin-bottom: 4px; }
+  .hint { color: #888; font-style: italic; font-size: 14px; }
+
+  .summary {
+    background: #1a252f;
+    color: #ecf0f1;
+    border-radius: 14px;
+    padding: 24px 28px;
+  }
+  .summary h2 { color: #fff; margin: 0 0 12px; font-size: 19px; }
+  .summary p { margin: 8px 0; font-size: 15px; }
+  .summary strong { color: #f39c12; }
+
+  .pillars {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+    margin-top: 18px;
+  }
+  .pillar {
+    background: rgba(255,255,255,0.08);
+    border-radius: 8px;
+    padding: 14px 16px;
+  }
+  .pillar .num {
+    font-size: 22px;
+    font-weight: 700;
+    color: #f39c12;
+    display: block;
+  }
+  .pillar .lbl { font-size: 13px; color: #ecf0f1; }
+  footer {
+    margin-top: 24px;
+    color: #777;
+    font-size: 12px;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Från fossil energi till matpris</h1>
+  <p class="lede">Hur högre priser på olja och naturgas vandrar genom värdekedjan och slår igenom på vad konsumenten betalar i butik. Klicka på en nod för att se mekanismen.</p>
+
+  <div class="diagram">
+    <svg viewBox="0 0 1000 640" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+          <path d="M 0 0 L 10 5 L 0 10 z" fill="#888"/>
+        </marker>
+        <marker id="arrowRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+          <path d="M 0 0 L 10 5 L 0 10 z" fill="#c0392b"/>
+        </marker>
+      </defs>
+
+      <!-- Lager 1: Energi -->
+      <g class="node" data-id="olja">
+        <rect x="80" y="40" width="200" height="80" rx="10" fill="#2c3e50"/>
+        <text x="180" y="70" text-anchor="middle" font-size="16" font-weight="700" fill="#fff">Råolja ↑</text>
+        <text x="180" y="92" text-anchor="middle" font-size="12" fill="#ecf0f1">Brent, WTI</text>
+        <text x="180" y="108" text-anchor="middle" font-size="12" fill="#ecf0f1">→ diesel, petrokemi</text>
+      </g>
+
+      <g class="node" data-id="gas">
+        <rect x="720" y="40" width="200" height="80" rx="10" fill="#2874a6"/>
+        <text x="820" y="70" text-anchor="middle" font-size="16" font-weight="700" fill="#fff">Naturgas ↑</text>
+        <text x="820" y="92" text-anchor="middle" font-size="12" fill="#fff">TTF, Henry Hub</text>
+        <text x="820" y="108" text-anchor="middle" font-size="12" fill="#fff">→ ammoniak, energi</text>
+      </g>
+
+      <!-- Lager 2: Insatsvaror -->
+      <g class="node" data-id="bekampning">
+        <rect x="40" y="200" width="220" height="100" rx="10" fill="#a04000"/>
+        <text x="150" y="228" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">Bekämpningsmedel ↑</text>
+        <text x="150" y="250" text-anchor="middle" font-size="11" fill="#fff">Aktiva substanser från</text>
+        <text x="150" y="266" text-anchor="middle" font-size="11" fill="#fff">petrokemi (bensen, etylen)</text>
+        <text x="150" y="284" text-anchor="middle" font-size="11" fill="#fff">+ energiintensiv syntes</text>
+      </g>
+
+      <g class="node" data-id="npk">
+        <rect x="390" y="200" width="220" height="100" rx="10" fill="#1e8449"/>
+        <text x="500" y="228" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">NPK-gödsel ↑</text>
+        <text x="500" y="250" text-anchor="middle" font-size="11" fill="#fff">N: Haber-Bosch från gas</text>
+        <text x="500" y="266" text-anchor="middle" font-size="11" fill="#fff">P, K: brytning + frakt</text>
+        <text x="500" y="284" text-anchor="middle" font-size="11" fill="#fff">(diesel, sjöfart)</text>
+      </g>
+
+      <g class="node" data-id="ammoniak">
+        <rect x="740" y="200" width="220" height="100" rx="10" fill="#2874a6"/>
+        <text x="850" y="228" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">Ammoniak (NH₃) ↑</text>
+        <text x="850" y="250" text-anchor="middle" font-size="11" fill="#fff">~70–80% av kostnaden</text>
+        <text x="850" y="266" text-anchor="middle" font-size="11" fill="#fff">är naturgas. Direkt</text>
+        <text x="850" y="284" text-anchor="middle" font-size="11" fill="#fff">koppling till TTF-priset.</text>
+      </g>
+
+      <!-- Lager 3: Gården -->
+      <g class="node" data-id="gard">
+        <rect x="260" y="360" width="480" height="90" rx="10" fill="#6c3483"/>
+        <text x="500" y="390" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">Jordbrukets produktionskostnad ↑</text>
+        <text x="500" y="412" text-anchor="middle" font-size="12" fill="#fff">Gödsel ≈ 15–35% av rörliga kostnader för spannmål</text>
+        <text x="500" y="430" text-anchor="middle" font-size="12" fill="#fff">Diesel, växtskydd, torkning, bevattning ovanpå det</text>
+      </g>
+
+      <!-- Lager 4: Livsmedel -->
+      <g class="node" data-id="livsmedel">
+        <rect x="260" y="510" width="480" height="100" rx="10" fill="#7b241c"/>
+        <text x="500" y="540" text-anchor="middle" font-size="18" font-weight="700" fill="#fff">Livsmedelspriser ↑</text>
+        <text x="500" y="562" text-anchor="middle" font-size="12" fill="#fff">Spannmål → foder → kött, mejeri, ägg</text>
+        <text x="500" y="580" text-anchor="middle" font-size="12" fill="#fff">+ förädling, kyla, transport, butiksled</text>
+        <text x="500" y="598" text-anchor="middle" font-size="12" fill="#fff">(alla led energiintensiva)</text>
+      </g>
+
+      <!-- Pilar -->
+      <line x1="180" y1="120" x2="150" y2="200" stroke="#888" stroke-width="2" marker-end="url(#arrow)"/>
+      <line x1="220" y1="120" x2="440" y2="200" stroke="#888" stroke-width="1.5" marker-end="url(#arrow)" stroke-dasharray="4,3"/>
+
+      <line x1="820" y1="120" x2="850" y2="200" stroke="#888" stroke-width="2" marker-end="url(#arrow)"/>
+      <line x1="740" y1="250" x2="610" y2="250" stroke="#c0392b" stroke-width="2.5" marker-end="url(#arrowRed)"/>
+
+      <line x1="150" y1="300" x2="310" y2="360" stroke="#c0392b" stroke-width="2.5" marker-end="url(#arrowRed)"/>
+      <line x1="500" y1="300" x2="500" y2="360" stroke="#c0392b" stroke-width="3" marker-end="url(#arrowRed)"/>
+      <line x1="850" y1="300" x2="690" y2="360" stroke="#888" stroke-width="1.5" marker-end="url(#arrow)" stroke-dasharray="4,3"/>
+
+      <path d="M 100 80 Q 30 360 270 410" stroke="#888" stroke-width="1.5" fill="none" marker-end="url(#arrow)" stroke-dasharray="4,3"/>
+      <text x="25" y="240" font-size="10" fill="#666" transform="rotate(-78 25 240)">diesel direkt</text>
+
+      <line x1="500" y1="450" x2="500" y2="510" stroke="#c0392b" stroke-width="3" marker-end="url(#arrowRed)"/>
+
+      <path d="M 280 80 Q 990 350 740 550" stroke="#888" stroke-width="1.5" fill="none" marker-end="url(#arrow)" stroke-dasharray="4,3"/>
+      <text x="965" y="320" font-size="10" fill="#666" transform="rotate(78 965 320)">transport + förädling</text>
+
+      <!-- Legend -->
+      <g transform="translate(80, 625)">
+        <line x1="0" y1="0" x2="30" y2="0" stroke="#c0392b" stroke-width="2.5"/>
+        <text x="38" y="4" font-size="11" fill="#333">Dominerande kostnadsväg</text>
+        <line x1="240" y1="0" x2="270" y2="0" stroke="#888" stroke-width="1.5" stroke-dasharray="4,3"/>
+        <text x="278" y="4" font-size="11" fill="#333">Sekundär / parallell väg</text>
+      </g>
+    </svg>
+  </div>
+
+  <div class="panel" id="info">
+    <p class="hint">Klicka på en nod i diagrammet för att se den underliggande mekanismen.</p>
+  </div>
+
+  <div class="summary">
+    <h2>Sammanfattning: tre transmissionsvägar samtidigt</h2>
+    <p>Energiprischocker når livsmedelspriset inte via en kanal, utan via tre parallella — vilket är därför genomslaget blir så starkt och varför korrelationen syns även i officiell statistik.</p>
+    <div class="pillars">
+      <div class="pillar">
+        <span class="num">1</span>
+        <span class="lbl"><strong>Insatsvarukanalen:</strong> Gas → ammoniak → kvävegödsel. Den mest direkta länken. Pristoppen 2022 visade detta tydligt när europeiska ammoniakfabriker stängde.</span>
+      </div>
+      <div class="pillar">
+        <span class="num">2</span>
+        <span class="lbl"><strong>Bränslekanalen:</strong> Olja → diesel → fält + lastbil + sjöfart. Drabbar alla led, från traktorn till kyldisken.</span>
+      </div>
+      <div class="pillar">
+        <span class="num">3</span>
+        <span class="lbl"><strong>Förädlingskanalen:</strong> Gas/el → torkning, mejeri, bageri, fryslager, växthus. Energi är ofta 5–15% av förädlingskostnaden.</span>
+      </div>
+    </div>
+    <p style="margin-top:18px;"><strong>Tidsförskjutning:</strong> Gas och olja syns på spannmålspriset inom veckor, på matpriset inom 3–9 månader, och på kött/mejeri ytterligare 6–12 månader senare via fodret. Det är därför livsmedelsinflationen ligger kvar långt efter att råvarupriserna fallit tillbaka.</p>
+  </div>
+
+  <footer>Visualisering: kausalkedja energi → insatsvaror → jordbruk → konsument</footer>
+</div>
+
+<script>
+  const info = {
+    olja: {
+      title: "Råolja",
+      body: `
+        <h3>Vad händer</h3>
+        <p>Brent och WTI är de globala referenspriserna. När de stiger drivs diesel, bunkerbränsle och petrokemiska råvaror upp.</p>
+        <h3>Tre roller</h3>
+        <ul>
+          <li><strong>Bränsle:</strong> Traktorer, skördetröskor, lastbilar, fartyg — hela logistikkedjan från åker till butik.</li>
+          <li><strong>Petrokemisk råvara:</strong> Bensen, toluen, etylen — byggstenar för många bekämpningsmedel och plast (förpackningar, växthusfilm).</li>
+          <li><strong>Korrelation med gas:</strong> Olja och gas följs ofta åt (substitut i kraftgenerering, sammankopplade marknader), så en oljechock föregår eller förstärker en gaschock.</li>
+        </ul>
+      `
+    },
+    gas: {
+      title: "Naturgas",
+      body: `
+        <h3>Vad händer</h3>
+        <p>TTF (Europa) och Henry Hub (USA) är referenspriserna. Naturgas är den enskilt viktigaste komponenten i kvävegödseltillverkning.</p>
+        <h3>Två roller i gödseltillverkning</h3>
+        <ul>
+          <li><strong>Råvara:</strong> Metan (CH₄) bryts ned för att leverera väte (H₂) som binds med kväve från luft till ammoniak (NH₃).</li>
+          <li><strong>Energi:</strong> Processen kräver hög temperatur och tryck — också det energin från gas.</li>
+        </ul>
+        <h3>Historiskt exempel</h3>
+        <p>Under europeiska gaskrisen 2021–2022 var produktionen av ammoniak olönsam vid TTF-priser över ~70 €/MWh. Yara, BASF och CF Industries minskade eller stoppade produktionen. Europeisk kvävegödsel blev både dyrare och knappare samtidigt.</p>
+      `
+    },
+    bekampning: {
+      title: "Bekämpningsmedel (växtskyddsmedel)",
+      body: `
+        <h3>Vad händer</h3>
+        <p>De flesta moderna herbicider, fungicider och insekticider är syntetiska organiska molekyler — byggda från petrokemiska byggstenar.</p>
+        <h3>Kostnadskomponenter</h3>
+        <ul>
+          <li><strong>Råvaror:</strong> Bensen, etylen, propylen, klor — flera är direkta derivat av råolja och naturgas.</li>
+          <li><strong>Energi i syntesen:</strong> Många reaktionssteg, ofta vid hög temperatur. Energikostnaden är betydande.</li>
+          <li><strong>Frakt:</strong> Tunga koncentrat, ofta från Kina/Indien. Container- och bunkerpriser slår direkt på landad kostnad.</li>
+        </ul>
+        <h3>Genomslag</h3>
+        <p>Mindre direkt än kvävegödsel mot livsmedelspriset, men signifikant: minskad användning vid prishöjningar ger lägre skörd → tunnare utbud.</p>
+      `
+    },
+    npk: {
+      title: "NPK-gödsel",
+      body: `
+        <h3>Vad NPK består av</h3>
+        <ul>
+          <li><strong>N (kväve):</strong> Tillverkat från ammoniak. Naturgaspriset = ~70–80% av tillverkningskostnaden.</li>
+          <li><strong>P (fosfor):</strong> Bryts (Marocko, Ryssland, Kina). Energi krävs för brytning och förädling; fraktas globalt.</li>
+          <li><strong>K (kalium):</strong> Bryts (Kanada, Vitryssland, Ryssland). Globalt logistikberoende.</li>
+        </ul>
+        <h3>Varför kvävekomponenten är den känsligaste</h3>
+        <p>Fosfor och kalium är gruvprodukter — råvaran är i marken. Kväve däremot tillverkas kontinuerligt från luft + gas, vilket gör det direkt exponerat mot dagspriset på naturgas.</p>
+        <h3>Andel av jordbrukarens kostnader</h3>
+        <p>För svenska spannmålsodlare typiskt 15–35% av rörliga kostnader. Vid pristoppar (2022) har det varit över 40% för vissa grödor.</p>
+      `
+    },
+    ammoniak: {
+      title: "Ammoniak (NH₃) — den dolda nyckeln",
+      body: `
+        <h3>Varför ammoniak är central</h3>
+        <p>Ammoniak är mellansteget mellan gas och nästan all kvävegödsel (urea, AN, CAN, NPK-N). Att förstå ammoniakpriset är att förstå gödselpriset.</p>
+        <h3>Haber-Bosch-processen</h3>
+        <ul>
+          <li>Tar väte från metan (gas) + kväve från luft.</li>
+          <li>Naturgas står för <strong>både råvara och processenergi</strong>.</li>
+          <li>I Europa: 70–80% av rörlig tillverkningskostnad = gas.</li>
+        </ul>
+        <h3>Praktisk konsekvens</h3>
+        <p>När TTF rör sig 20% rör sig europeiskt ammoniakpris nästan 1:1. Det är därför priset på säck i lantmännenbutiken kan dubblas på ett halvår.</p>
+      `
+    },
+    gard: {
+      title: "Jordbrukets produktionskostnad",
+      body: `
+        <h3>Var energin syns på gården</h3>
+        <ul>
+          <li><strong>Gödsel:</strong> 15–35% av rörliga kostnader (vid normalpriser). Vid pristoppar 35–45%.</li>
+          <li><strong>Diesel:</strong> Plöjning, sådd, skörd, transport till lagring.</li>
+          <li><strong>Torkning:</strong> Spannmålstork drivs av olja/gas/pellets — energikostnad direkt synlig på spannmål med hög skördefukt.</li>
+          <li><strong>Växtskydd:</strong> Mindre andel men ökande vid hög prisnivå.</li>
+          <li><strong>Bevattning, mjölkning, ventilation:</strong> El, som i sin tur prissätts mot gas i Europa.</li>
+        </ul>
+        <h3>Asymmetri</h3>
+        <p>Bonden tar kostnadshöjningen direkt men kan inte alltid skicka den vidare. Det innebär att vissa förändringar i avkastning (mindre gödsel → lägre skörd) också spelar in i nästa års matpris.</p>
+      `
+    },
+    livsmedel: {
+      title: "Livsmedelspriser i butik",
+      body: `
+        <h3>Tre transmissionsvägar når konsumenten</h3>
+        <ul>
+          <li><strong>Direkt via vegetabilier:</strong> Bröd, pasta, flingor, mjöl — kort kedja från åker till butik.</li>
+          <li><strong>Indirekt via foder:</strong> Spannmål och sojamjöl används som djurfoder. Högre fodersäd → högre kött, mejeri, ägg, fisk (foderfisk).</li>
+          <li><strong>Förädling och logistik:</strong> Bageri, mejeri, slakteri, fryslager, kyldisk, transport. Alla energiintensiva. Gas och el slår genom här igen.</li>
+        </ul>
+        <h3>Eftersläpning</h3>
+        <p>Spannmål svarar inom veckor. Bröd och mjöl inom månader. Kött och mejeri kan släpa 9–18 månader — fodret förmedlas via djurets tillväxtcykel. Det är därför "matinflationen" ligger kvar längre än energiinflationen.</p>
+        <h3>Asymmetri i nedåtgång</h3>
+        <p>Studier (bl.a. ECB, BIS) visar att livsmedelspriser stiger snabbt när insatskostnaderna går upp men sjunker långsammare när de faller. Marginaler i förädlings- och butiksled tenderar att utvidgas under övergångsperioden.</p>
+      `
+    }
+  };
+
+  const panel = document.getElementById("info");
+  const nodes = document.querySelectorAll(".node");
+
+  function show(id) {
+    const data = info[id];
+    if (!data) return;
+    nodes.forEach(n => n.classList.toggle("active", n.dataset.id === id));
+    panel.innerHTML = `<h2>${data.title}</h2>${data.body}`;
+    panel.scrollIntoView({ behavior: "smooth", block: "nearest" });
+  }
+
+  nodes.forEach(n => {
+    n.addEventListener("click", () => show(n.dataset.id));
+  });
+</script>
+</body>
+</html>

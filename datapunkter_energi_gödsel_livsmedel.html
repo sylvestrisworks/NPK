@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Datapunkter: energi → gödsel → livsmedel 2020–2024</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: #f5f3ef;
+    color: #1a252f;
+    margin: 0;
+    padding: 28px 20px;
+    line-height: 1.55;
+  }
+  .wrap { max-width: 1100px; margin: 0 auto; }
+  h1 { font-size: 26px; margin: 0 0 6px; letter-spacing: -0.01em; }
+  .lede { font-size: 15px; color: #555; margin: 0 0 24px; max-width: 820px; }
+  h2 {
+    font-size: 18px;
+    margin: 28px 0 10px;
+    color: #1a252f;
+    border-bottom: 2px solid #1a252f;
+    padding-bottom: 4px;
+  }
+  .card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 22px 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    margin-bottom: 16px;
+  }
+  .row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 720px) { .row { grid-template-columns: 1fr; } }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; margin-top: 8px; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #eee; }
+  th { background: #f0ede8; font-weight: 600; font-size: 13px; }
+  td.num { text-align: right; font-variant-numeric: tabular-nums; }
+  .peak { background: #fff3e0; font-weight: 600; }
+  .src { font-size: 12px; color: #888; margin-top: 6px; }
+
+  .chart-wrap { margin-top: 12px; }
+  svg.chart { width: 100%; height: 280px; display: block; }
+  .axis text { font-size: 11px; fill: #666; }
+  .axis line, .axis path { stroke: #ccc; fill: none; }
+  .gridline { stroke: #eee; }
+  .legend { font-size: 12px; margin-top: 8px; }
+  .legend span { display: inline-block; margin-right: 16px; }
+  .legend i {
+    display: inline-block; width: 14px; height: 3px; vertical-align: middle;
+    margin-right: 5px;
+  }
+
+  .takeaway {
+    background: #1a252f;
+    color: #ecf0f1;
+    border-radius: 12px;
+    padding: 22px 26px;
+    margin-top: 24px;
+  }
+  .takeaway h2 { color: #fff; border: none; padding: 0; margin: 0 0 12px; font-size: 18px; }
+  .takeaway p { margin: 6px 0; font-size: 14px; }
+  .takeaway strong { color: #f39c12; }
+  .citation { font-size: 11px; color: #999; margin-top: 4px; font-style: italic; }
+  footer { margin-top: 24px; color: #777; font-size: 12px; text-align: center; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Datapunkter: kedjan energi → gödsel → livsmedel</h1>
+  <p class="lede">Konkreta tal från 2020–2024 som visar sambandet. Källor: ICE/TTF, EIA, Världsbanken, USDA ERS, Yara Annual Reports, Argus Media, SCB.</p>
+
+  <h2>1. Energiprischocken</h2>
+  <div class="card">
+    <div class="row">
+      <div>
+        <strong>Naturgas (TTF, EUR/MWh — årsmedel)</strong>
+        <table>
+          <tr><th>År</th><th class="num">€/MWh</th><th class="num">Förändring</th></tr>
+          <tr><td>2019–2020</td><td class="num">~10–15</td><td class="num">baseline</td></tr>
+          <tr><td>2021</td><td class="num">~47</td><td class="num">+3×</td></tr>
+          <tr class="peak"><td>2022 (årsmedel)</td><td class="num">~123</td><td class="num">+8×</td></tr>
+          <tr class="peak"><td>aug 2022 (topp)</td><td class="num">~342</td><td class="num">+15×</td></tr>
+          <tr><td>2023</td><td class="num">~41</td><td class="num">+3×</td></tr>
+          <tr><td>2024</td><td class="num">~35</td><td class="num">+2,5×</td></tr>
+        </table>
+        <p class="src">Källa: ICE/Cedigaz, "Pre-crisis average ~20 €/MWh, peak 342 €/MWh Aug 2022".</p>
+      </div>
+      <div>
+        <strong>Brent råolja (USD/fat — årsmedel)</strong>
+        <table>
+          <tr><th>År</th><th class="num">USD/fat</th><th class="num">Förändring</th></tr>
+          <tr><td>2020</td><td class="num">42</td><td class="num">baseline (pandemi)</td></tr>
+          <tr><td>2021</td><td class="num">~70</td><td class="num">+67%</td></tr>
+          <tr class="peak"><td>2022</td><td class="num">~100</td><td class="num">+138%</td></tr>
+          <tr><td>2023</td><td class="num">~82</td><td class="num">+95%</td></tr>
+          <tr><td>2024</td><td class="num">~80</td><td class="num">+90%</td></tr>
+        </table>
+        <p class="src">Källa: EIA STEO, Statista, FRED (POILBREUSDM).</p>
+      </div>
+    </div>
+  </div>
+
+  <h2>2. Transmissionen till gödsel</h2>
+  <div class="card">
+    <div class="row">
+      <div>
+        <strong>Yara — gaskostnad och europeisk produktion</strong>
+        <table>
+          <tr><th></th><th class="num">2021</th><th class="num">2022</th><th class="num">2023</th></tr>
+          <tr><td>Gaskostnad (USD/mn Btu)</td><td class="num">11,70</td><td class="num peak">31,80</td><td class="num">~15</td></tr>
+          <tr><td>Ammoniakproduktion (mn ton)</td><td class="num">7,26</td><td class="num peak">6,51</td><td class="num">6,39</td></tr>
+          <tr><td>Kapacitetsnedskärning</td><td class="num">~30%</td><td class="num peak">35%</td><td class="num">19%</td></tr>
+        </table>
+        <p class="src">Källa: Yara Annual Report 2022 & 2023, Argus Media. Tydligast 2022: gas +172%, produktion ned 35%.</p>
+      </div>
+      <div>
+        <strong>Globala gödselpriser (USD/ton — topp)</strong>
+        <table>
+          <tr><th>Produkt</th><th class="num">Innan</th><th class="num">2022-topp</th></tr>
+          <tr><td>Vattenfri ammoniak (USA)</td><td class="num">~487</td><td class="num peak">+1 600</td></tr>
+          <tr><td>Urea (globalt spot)</td><td class="num">~270</td><td class="num peak">+1 000</td></tr>
+          <tr><td>DAP (fosfor)</td><td class="num">~330</td><td class="num peak">954 (apr)</td></tr>
+          <tr><td>Urea, EU (jun 2023)</td><td class="num">—</td><td class="num">287</td></tr>
+        </table>
+        <p class="src">Källa: USDA ERS, Världsbanken, Statista. Andel av spannmålsodlares kostnader: 33–44%.</p>
+      </div>
+    </div>
+  </div>
+
+  <h2>3. Kronologin — när varje länk slog till</h2>
+  <div class="card">
+    <table>
+      <tr><th>Tidpunkt</th><th>Händelse</th><th>Konsekvens</th></tr>
+      <tr><td>Sep–nov 2021</td><td>TTF rusar (gaslager låga, ökad efterfrågan post-pandemi)</td><td>Yara skär europeisk ammoniakproduktion med 30%</td></tr>
+      <tr><td>Okt 2021</td><td>Vattenfri ammoniak i USA passerar 1 000 USD/ton</td><td>Första signalen om global spridning</td></tr>
+      <tr class="peak"><td>Feb–mar 2022</td><td>Ryssland invaderar Ukraina; TTF når dagspriser >200 €/MWh</td><td>Yara kör Europa på 45% kapacitet. CF Industries stänger UK</td></tr>
+      <tr class="peak"><td>Aug 2022</td><td>TTF topp 342 €/MWh. Flera europeiska producenter pausar</td><td>Yara nere på 35% kapacitet; Achema, Nitrogenmuvek, Grupa Azoty drar ned</td></tr>
+      <tr><td>Dec 2022</td><td>Svenska livsmedelspriser +18,6% jämfört med dec 2021</td><td>Största årsförändring på över 10 år (SCB)</td></tr>
+      <tr><td>Hela 2023</td><td>Gaspriset normaliseras (årsmedel ~41 €/MWh)</td><td>Livsmedelspriserna +12,1% (årsmedel) — fortfarande höga</td></tr>
+      <tr><td>Aug 2023</td><td>—</td><td>Aug 2021 → aug 2023: livsmedel +24% totalt</td></tr>
+    </table>
+  </div>
+
+  <h2>4. Livsmedelspriset i Sverige — vad konsumenten betalade</h2>
+  <div class="card">
+    <strong>SCB KPI, livsmedel och alkoholfria drycker</strong>
+    <table>
+      <tr><th>Period</th><th class="num">Förändring</th><th>Kommentar</th></tr>
+      <tr><td>Dec 2020 → dec 2021</td><td class="num">~6%</td><td>Början på uppgången</td></tr>
+      <tr class="peak"><td>Dec 2021 → dec 2022</td><td class="num">+18,6%</td><td>Topp efter gas/Ukraina-chocken</td></tr>
+      <tr><td>Årsmedel 2023</td><td class="num">+12,1%</td><td>Andra året i rad med dubbelsiffrig ökning</td></tr>
+      <tr><td>Dec 2022 → dec 2023</td><td class="num">+5,5%</td><td>Avtagande, men från hög nivå</td></tr>
+      <tr><td>Aug 2021 → aug 2023</td><td class="num">+24%</td><td>Två-årig kumulativ effekt</td></tr>
+      <tr><td>Dec 2021 → mar 2023</td><td class="num">+25%</td><td>16 månader av sammanhängande uppgång</td></tr>
+    </table>
+    <p class="src">Källa: SCB, KPI-statistik (publicerad jan 2024, mar 2024).</p>
+  </div>
+
+  <h2>5. Visualisering av sambandet</h2>
+  <div class="card">
+    <div class="chart-wrap">
+      <svg class="chart" viewBox="0 0 700 320" xmlns="http://www.w3.org/2000/svg">
+        <!-- Gridlines -->
+        <line class="gridline" x1="60" y1="40" x2="680" y2="40"/>
+        <line class="gridline" x1="60" y1="100" x2="680" y2="100"/>
+        <line class="gridline" x1="60" y1="160" x2="680" y2="160"/>
+        <line class="gridline" x1="60" y1="220" x2="680" y2="220"/>
+        <line class="gridline" x1="60" y1="280" x2="680" y2="280"/>
+        <!-- Y-axis labels (indexerat, 2020=100) -->
+        <text x="55" y="44" text-anchor="end" font-size="11" fill="#666">800</text>
+        <text x="55" y="104" text-anchor="end" font-size="11" fill="#666">600</text>
+        <text x="55" y="164" text-anchor="end" font-size="11" fill="#666">400</text>
+        <text x="55" y="224" text-anchor="end" font-size="11" fill="#666">200</text>
+        <text x="55" y="284" text-anchor="end" font-size="11" fill="#666">100</text>
+        <text x="15" y="160" font-size="11" fill="#444" transform="rotate(-90 15 160)">Index (2020 = 100)</text>
+        <!-- X-axis -->
+        <line x1="60" y1="280" x2="680" y2="280" stroke="#999"/>
+        <text x="60" y="300" font-size="11" fill="#666">2020</text>
+        <text x="184" y="300" font-size="11" fill="#666">2021</text>
+        <text x="308" y="300" font-size="11" fill="#666">2022</text>
+        <text x="432" y="300" font-size="11" fill="#666">2023</text>
+        <text x="556" y="300" font-size="11" fill="#666">2024</text>
+        <text x="680" y="300" text-anchor="end" font-size="11" fill="#666">'25</text>
+
+        <!-- TTF naturgas: 2020=12.5, 2021=47, 2022=123, peak Aug 2022=342, 2023=41, 2024=35 -->
+        <!-- Schema: index 2020=100, så TTF: 100, 376, 984, 2736 (peak), 328, 280 - skala om till max 800 så vi tar TTF/3 -->
+        <!-- Bättre: visa relativt 2020-pris, men skala till max 800 -->
+        <!-- 12.5→100, 47→376, 123→984 (overflow), peak→2736. Vi använder logaritmisk eller skär av topp. -->
+        <!-- Använd istället index där 100=2020, tak vid 800. TTF: 100, 376, 800 (capped 984), 328, 280. Skala: 800=y40, 100=y280. y = 280 - (val-100) * (240/700) -->
+        <!-- För enkelhet plotta direkt: y = 280 - (val/800)*240 -->
+
+        <!-- TTF line: 2020=100, mid-2021=200, 2021=376, mid-2022=600, 2022 peak=800+, 2023=328, 2024=280 -->
+        <polyline points="60,250 122,235 184,167 246,87 308,40 370,80 432,182 494,222 556,196 618,196 680,202"
+                  stroke="#3498db" stroke-width="2.5" fill="none"/>
+
+        <!-- Urea/ammoniak (USDA ammoniak: 2020=487, 2021=750→1000, 2022 peak 1600, 2023 ~600, 2024 ~500) -->
+        <!-- Index: 100, 154→205, 328, 123, 103. Skala -->
+        <polyline points="60,250 122,210 184,170 246,80 308,40 370,90 432,170 494,210 556,220 618,225 680,228"
+                  stroke="#27ae60" stroke-width="2.5" fill="none"/>
+
+        <!-- Sverige KPI livsmedel (årsmedel 2020=100, 2021=102, 2022=110, 2023=123, 2024=125) -->
+        <polyline points="60,280 122,278 184,275 246,265 308,240 370,228 432,220 494,215 556,213 618,212 680,212"
+                  stroke="#c0392b" stroke-width="3" fill="none"/>
+
+        <!-- Markörer för viktiga datapunkter -->
+        <circle cx="308" cy="40" r="4" fill="#3498db"/>
+        <text x="316" y="36" font-size="11" fill="#3498db" font-weight="600">TTF aug-22: 342 €/MWh</text>
+
+        <circle cx="308" cy="40" r="4" fill="#27ae60"/>
+        <text x="316" y="52" font-size="11" fill="#27ae60" font-weight="600">Ammoniak: 1 600 USD/t</text>
+
+        <circle cx="432" cy="220" r="4" fill="#c0392b"/>
+        <text x="440" y="216" font-size="11" fill="#c0392b" font-weight="600">SE KPI livsmedel: +18,6% (dec 22 vs dec 21)</text>
+      </svg>
+      <div class="legend">
+        <span><i style="background:#3498db"></i> Naturgas (TTF)</span>
+        <span><i style="background:#27ae60"></i> Ammoniak/Urea</span>
+        <span><i style="background:#c0392b"></i> Svenska livsmedelspriser (KPI)</span>
+      </div>
+      <p class="src">Schematisk visualisering — kurvor är förenklade till årsmedelvärden där peak Aug 2022 ovan i naturgas är klippt vid index 800 (faktiskt värde ~2 700). Visar relativ rörelse, inte absoluta nivåer.</p>
+    </div>
+  </div>
+
+  <div class="takeaway">
+    <h2>Slutsats för presentation</h2>
+    <p><strong>Genomslaget är dokumenterat och kvantifierbart.</strong> Gas +8× årsmedel 2022 → Yaras gaskostnad nästan +3× → 35% kapacitetsnedskärning → svenska livsmedelspriser +18,6% (dec 2022 vs dec 2021).</p>
+    <p><strong>Tidsförskjutningen är ~6–12 månader.</strong> TTF rusade hösten 2021 och våren 2022. Svensk livsmedels-KPI nådde sin topp i mars 2023 — drygt ett år senare.</p>
+    <p><strong>Asymmetrin syns tydligt.</strong> När TTF normaliserades 2023 (årsmedel 41 €/MWh, ned två tredjedelar från 2022) sjönk inte matpriserna — de fortsatte upp +12,1% (årsmedel) innan utvecklingen avtog 2024.</p>
+    <p><strong>Yaras gaskostnad är den enskilt tydligaste mätpunkten</strong> för transmissionen: från 11,70 USD/mn Btu (2021) till 31,80 USD/mn Btu (2022) — exakt det kostnadshopp som driver hela kedjan.</p>
+  </div>
+
+  <footer>Sammanställd från SCB, EIA, ICE/TTF (via Cedigaz), USDA ERS, Yara Annual Reports och Argus Media — maj 2026.</footer>
+</div>
+</body>
+</html>
