@@ -338,7 +338,44 @@ a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
   stroke: var(--ink-soft);
   stroke-width: 1;
   stroke-dasharray: 3 3;
-  opacity: 0.5;
+  opacity: 0.55;
+}
+
+.price-grid .cell-now-label {
+  font-family: var(--sans);
+  font-size: 9px;
+  font-weight: 600;
+  fill: var(--ink-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.price-grid .cell-gridline {
+  stroke: var(--rule);
+  stroke-width: 0.6;
+}
+
+.price-grid .cell-y-label {
+  font-family: var(--sans);
+  font-size: 8.5px;
+  fill: var(--ink-soft);
+  opacity: 0.65;
+}
+
+.price-grid .gap-fill {
+  opacity: 0;
+  transition: opacity 0.9s ease 0.5s;
+  stroke: none;
+}
+.price-grid.is-active .gap-fill { opacity: 0.22; }
+
+.price-grid .gap-fill-narrow { fill: var(--accent-amber); }
+.price-grid .gap-fill-close  { fill: var(--accent-green); }
+.price-grid .gap-fill-widen  { fill: var(--accent-red); }
+
+.price-grid .legend-gap-swatch {
+  fill: var(--accent-amber);
+  opacity: 0.35;
 }
 
 .price-grid .line {
@@ -838,6 +875,7 @@ footer {
   /* Charts: visa direkt i fullt utritat läge */
   .storage-chart .storage-line,
   .price-grid .line { stroke-dashoffset: 0; }
+  .price-grid .gap-fill { opacity: 0.22; }
   .hormuz-map .route { stroke-dashoffset: 0; opacity: 1; }
   .hormuz-map .route-label { opacity: 1; }
   .counters { opacity: 1; }
