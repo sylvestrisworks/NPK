@@ -20,6 +20,76 @@
   }
 
   // ============================================================
+  // Scroll progress bar
+  // ============================================================
+  const progressEl = document.getElementById('scroll-progress');
+  if (progressEl) {
+    let scrollTicking = false;
+    const updateProgress = () => {
+      const h = document.documentElement;
+      const max = h.scrollHeight - h.clientHeight;
+      const pct = max > 0 ? (h.scrollTop / max) * 100 : 0;
+      progressEl.style.width = pct + '%';
+      scrollTicking = false;
+    };
+    window.addEventListener('scroll', () => {
+      if (!scrollTicking) {
+        requestAnimationFrame(updateProgress);
+        scrollTicking = true;
+      }
+    }, { passive: true });
+    updateProgress();
+  }
+
+  // ============================================================
+  // Cinematic interstitials — IntersectionObserver triggers
+  // reveal + count-up av jätte-statistiken
+  // ============================================================
+  const formatStat = (val, decimals, prefix, suffix) => {
+    let str;
+    if (decimals > 0) {
+      str = val.toFixed(decimals).replace('.', ',');
+    } else {
+      str = Math.round(val).toString();
+    }
+    return (prefix || '') + str + (suffix || '');
+  };
+
+  const animateStat = (el) => {
+    const target = parseFloat(el.dataset.target);
+    const decimals = parseInt(el.dataset.decimal || '0', 10);
+    const prefix = el.dataset.prefix || '';
+    const suffix = el.dataset.suffix || '';
+    const duration = 1800;
+    const startDelay = 400;
+    const start = performance.now() + startDelay;
+    const tick = (now) => {
+      const elapsed = now - start;
+      if (elapsed < 0) {
+        requestAnimationFrame(tick);
+        return;
+      }
+      const t = Math.min(1, elapsed / duration);
+      const eased = 1 - Math.pow(1 - t, 3);
+      el.innerHTML = formatStat(target * eased, decimals, prefix, suffix);
+      if (t < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  };
+
+  const interObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !entry.target.classList.contains('is-visible')) {
+        entry.target.classList.add('is-visible');
+        const stat = entry.target.querySelector('.interstitial-stat[data-target]');
+        if (stat) animateStat(stat);
+      }
+    });
+  }, { threshold: 0.45 });
+
+  document.querySelectorAll('.interstitial').forEach(el => interObserver.observe(el));
+
+  // ============================================================
   // Generisk step-tracker: lägger till .is-active på aktivt steg
   // och dispatchar custom-event för per-akt-logik
   // ============================================================
@@ -102,6 +172,87 @@
   }
 
   // ------------------------------------------------------------
+  // AKT 3 — Tanker-animationer (initieras en gång)
+  // ------------------------------------------------------------
+  const tankerMap = document.querySelector('.hormuz-map');
+  const tankers = [];
+  let tankerLastTs = performance.now();
+
+  if (tankerMap) {
+    const SVG_NS = 'http://www.w3.org/2000/svg';
+
+    const makeTanker = () => {
+      const g = document.createElementNS(SVG_NS, 'g');
+      g.setAttribute('class', 'tanker');
+      const rect = document.createElementNS(SVG_NS, 'rect');
+      rect.setAttribute('x', '-5');
+      rect.setAttribute('y', '-1.5');
+      rect.setAttribute('width', '10');
+      rect.setAttribute('height', '3');
+      rect.setAttribute('rx', '0.5');
+      rect.setAttribute('class', 'tanker-body');
+      g.appendChild(rect);
+      return g;
+    };
+
+    // 3 på Asien-rutten, 4 på Europa-rutten (Europa-rutten är längre)
+    const tankerConfig = [
+      { selector: '.route-asia',   count: 3, speed: 0.00009 },
+      { selector: '.route-europe', count: 4, speed: 0.00007 }
+    ];
+
+    // Insert tankers FÖRE closure-marker så att kryss + stämpel ritas över dem
+    const closureMarker = tankerMap.querySelector('.closure-marker');
+
+    tankerConfig.forEach(cfg => {
+      const path = tankerMap.querySelector(cfg.selector);
+      if (!path) return;
+      const len = path.getTotalLength();
+      for (let i = 0; i < cfg.count; i++) {
+        const el = makeTanker();
+        if (closureMarker) tankerMap.insertBefore(el, closureMarker);
+        else tankerMap.appendChild(el);
+        tankers.push({
+          el, path, len,
+          progress: i / cfg.count,
+          speed: cfg.speed,
+          blocked: false,
+          visible: false
+        });
+      }
+    });
+
+    // Skona reduced-motion-användare: tankers står still
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    const tankerTick = (ts) => {
+      const dt = ts - tankerLastTs;
+      tankerLastTs = ts;
+      tankers.forEach(t => {
+        if (!t.blocked && t.visible && !reducedMotion) {
+          t.progress += t.speed * dt;
+          if (t.progress > 1) t.progress -= 1;
+        }
+        if (t.visible) {
+          const pt = t.path.getPointAtLength(t.progress * t.len);
+          t.el.setAttribute('transform', `translate(${pt.x.toFixed(2)} ${pt.y.toFixed(2)})`);
+        }
+      });
+      requestAnimationFrame(tankerTick);
+    };
+    requestAnimationFrame(tankerTick);
+  }
+
+  const setTankerState = (visible, blocked) => {
+    tankers.forEach(t => {
+      t.visible = visible;
+      t.blocked = blocked;
+      t.el.classList.toggle('is-visible', visible);
+      t.el.classList.toggle('is-blocked', blocked);
+    });
+  };
+
+  // ------------------------------------------------------------
   // AKT 3 — Hormuz-karta + counters
   // ------------------------------------------------------------
   function handleAkt3(num, phase, direction) {
@@ -129,34 +280,39 @@
 
     switch (num) {
       case '1':
-        // Intro: karta synlig, inga rutter ännu
+        // Intro: karta synlig, inga rutter eller tankers ännu
         setRoutes(false, false);
+        setTankerState(false, false);
         straitRing.classList.remove('is-active');
         closureMark.classList.remove('is-visible');
         closureStamp.classList.remove('is-visible');
         counters.classList.remove('is-revealed');
         break;
       case '2':
-        // Qatar/UAE-volymerna: rutter ritas i grönt
+        // Qatar/UAE-volymerna: rutter ritas, tankers börjar röra sig
         setRoutes(true, false);
+        setTankerState(true, false);
         straitRing.classList.remove('is-active');
         closureMark.classList.remove('is-visible');
         closureStamp.classList.remove('is-visible');
         break;
       case '3':
-        // 4 mars-stängningen: rutter blir röda, kryss + stämpel
+        // 4 mars-stängningen: rutter blir röda, tankers fryser, kryss + stämpel
         setRoutes(true, true);
+        setTankerState(true, true);
         straitRing.classList.add('is-active');
         closureMark.classList.add('is-visible');
         closureStamp.classList.add('is-visible');
         break;
       case '4':
         // IEA "största störningen": counters animeras
+        setTankerState(true, true);
         counters.classList.add('is-revealed');
         animateCounters();
         break;
       case '5':
         // Asien drabbas först: extra pulse på Asien-rutt
+        setTankerState(true, true);
         if (routeAsia) {
           routeAsia.classList.add('is-pulsing');
           setTimeout(() => routeAsia.classList.remove('is-pulsing'), 2400);

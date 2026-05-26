@@ -12,9 +12,26 @@
   --accent-green: #3f6b3f;
   --accent-red: #b1442c;
   --accent-amber: #c98a2a;
-  --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --serif: "Fraunces", "Source Serif 4", Georgia, "Times New Roman", serif;
   --sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
   --measure: 36rem;
+}
+
+html { font-optical-sizing: auto; }
+
+/* ============================================================
+   Scroll progress bar
+   ============================================================ */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background: var(--accent-amber);
+  z-index: 100;
+  transition: width 0.05s linear;
+  will-change: width;
 }
 
 * { box-sizing: border-box; }
@@ -37,9 +54,10 @@ html, body {
 h1, h2, h3 {
   font-family: var(--serif);
   font-weight: 700;
-  letter-spacing: -0.01em;
+  font-variation-settings: "opsz" 96, "SOFT" 30;
+  letter-spacing: -0.015em;
   margin: 0 0 0.6em 0;
-  line-height: 1.15;
+  line-height: 1.12;
 }
 
 h2 { font-size: clamp(2rem, 4vw, 3.2rem); }
@@ -116,6 +134,91 @@ a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
 @keyframes bob {
   0%, 100% { transform: translate(-50%, 0); opacity: 0.6; }
   50% { transform: translate(-50%, 8px); opacity: 1; }
+}
+
+/* ============================================================
+   Cinematic interstitials
+   ============================================================ */
+.interstitial {
+  min-height: 100vh;
+  background: var(--ink);
+  color: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 8vw;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.interstitial-alt {
+  background: #14141c;
+}
+
+.interstitial::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 70% 30%, rgba(201, 138, 42, 0.10), transparent 55%),
+    radial-gradient(ellipse at 20% 80%, rgba(177, 68, 44, 0.08), transparent 60%);
+  pointer-events: none;
+}
+
+.interstitial-inner {
+  max-width: 50rem;
+  position: relative;
+  z-index: 1;
+}
+
+.interstitial-eyebrow {
+  font-family: var(--sans);
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--accent-amber);
+  margin: 0 0 2.5rem 0;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.7s ease 0.1s, transform 0.7s ease 0.1s;
+}
+
+.interstitial-stat {
+  font-family: var(--serif);
+  font-variation-settings: "opsz" 144, "SOFT" 30;
+  font-size: clamp(6rem, 17vw, 14rem);
+  font-weight: 700;
+  line-height: 0.95;
+  color: var(--bg);
+  margin: 0;
+  letter-spacing: -0.045em;
+  font-variant-numeric: tabular-nums;
+  opacity: 0;
+  transform: translateY(28px) scale(0.96);
+  transition: opacity 1.1s cubic-bezier(0.2, 0.7, 0.2, 1) 0.4s,
+              transform 1.1s cubic-bezier(0.2, 0.7, 0.2, 1) 0.4s;
+}
+
+.interstitial-caption {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(1.05rem, 1.6vw, 1.4rem);
+  color: rgba(250, 248, 244, 0.68);
+  margin: 2.5rem auto 0;
+  max-width: 38rem;
+  line-height: 1.5;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.9s ease 0.95s, transform 0.9s ease 0.95s;
+}
+
+.interstitial.is-visible .interstitial-eyebrow,
+.interstitial.is-visible .interstitial-stat,
+.interstitial.is-visible .interstitial-caption {
+  opacity: 1;
+  transform: translateY(0) scale(1);
 }
 
 /* ============================================================
@@ -630,6 +733,23 @@ a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
   fill: var(--accent-red);
 }
 
+/* Tankers */
+.hormuz-map .tanker {
+  opacity: 0;
+  transition: opacity 0.6s ease 0.4s;
+  pointer-events: none;
+}
+.hormuz-map .tanker.is-visible { opacity: 1; }
+.hormuz-map .tanker-body {
+  fill: var(--ink);
+  stroke: var(--bg);
+  stroke-width: 0.5;
+  transition: fill 0.6s ease;
+}
+.hormuz-map .tanker.is-blocked .tanker-body {
+  fill: var(--accent-red);
+}
+
 /* ============================================================
    AKT 3 — Hormuz counters
    ============================================================ */
@@ -880,4 +1000,7 @@ footer {
   .hormuz-map .route-label { opacity: 1; }
   .counters { opacity: 1; }
   .npk-letter { opacity: 1; }
+  .interstitial-eyebrow, .interstitial-stat, .interstitial-caption {
+    opacity: 1 !important; transform: none !important;
+  }
 }
