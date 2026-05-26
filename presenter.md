@@ -26,7 +26,7 @@ Vänta tills publiken ser hela hero-sidan, scrolla sedan in i Akt 1.
 - *Step 1 (alla bokstäver):* "Tre näringsämnen som varje gröda kräver i mängd. Smil har visat att ungefär hälften av världens befolkning får sin näring via syntetiskt kväve."
 - *Step 2 (N):* "Kväve tillverkas industriellt sedan 1909. Haber-Bosch tar väte från naturgas och kväve från luft. **70–80 % av tillverkningskostnaden är gaspriset.**"
 - *Step 3 (P):* "Fosfor bryts. **Marocko har 70 % av världens kända reserver.** Övriga producenter är Kina, USA, Ryssland. Reserverna räcker i 1 300 år vid nuvarande takt — men marknaden är extremt koncentrerad."
-- *Step 4 (K):* "Kalium bryts som potash. Kanada, Ryssland och Belarus är de tre stora. Bara Ryssland + Belarus stod för en tredjedel av världsexporten före 2022."
+- *Step 4 (K):* "Kalium bryts som pottaska. Kanada, Ryssland och Belarus är de tre stora. Bara Ryssland + Belarus stod för en tredjedel av världsexporten före 2022."
 - *Step 5 (emphasis):* "Bekymret är inte att näringen tar slut. Bekymret är att den hänger på ett fåtal länder och ett fåtal hamnar."
 
 **Frågor som kan komma:** "Räcker inte stallgödsel?" → Svar: "I dagens skala, nej — vi har inte djur nog. Stallgödsel täcker globalt ~10 % av kvävebehovet."
@@ -38,7 +38,7 @@ Vänta tills publiken ser hela hero-sidan, scrolla sedan in i Akt 1.
 **Skärm:** Stapeldiagram med Ryssland/Belarus-andelen som krymper när du scrollar.
 
 **Du säger:**
-- *Step 1:* "Före 2022 var Ryssland + Belarus tunga aktörer i hela NPK-kedjan. Naturgas till kvävetillverkning, fosfat, framför allt potash."
+- *Step 1:* "Före 2022 var Ryssland + Belarus tunga aktörer i hela NPK-kedjan. Naturgas till kvävetillverkning, fosfat, framför allt pottaska."
 - *Step 2:* "Sanktionerna efter Ukraina-invasionen vred om kranar nästan över en natt. Europa tappade sin största gasleverantör — och därmed grunden för sin egen kvävegödseltillverkning. Yara körde europeisk ammoniakproduktion på 35 % under 2022."
 - *Step 3:* "Flödena dirigerades om. Qatar, Saudiarabien, Oman, Marocko, Egypten tog över ledet. Det är där vi köper idag."
 - *Step 4 (emphasis):* "Resultatet är ett system utan marginal — och alla nya leverantörer skeppar via samma vatten."

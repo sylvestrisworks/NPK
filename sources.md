@@ -21,16 +21,16 @@ Snapshot taget vid research-passet **maj 2026**.
 ## 2. Ryssland & Belarus i NPK-kedjan
 
 **Påståenden:**
-- Russia är världens näst största producent av potash, ~20 % av globala exporter.
+- Russia är världens näst största producent av pottaska, ~20 % av globala exporter.
 - Belarus står för ~15 % av globala gödselexporter.
-- Tillsammans ~35 % av globalt potash-utbud före 2022.
+- Tillsammans ~35 % av globalt pottaska-utbud före 2022.
 
 Källor:
 - [Discovery Alert, "Belarus Potash Sanctions Lifted"](https://discoveryalert.com.au/belarus-potash-sanctions-2025-global-trade-impact/)
 - [Mining.com, "Global potash market shrugs off US move to end Belarus sanctions"](https://www.mining.com/web/global-potash-market-shrugs-off-us-move-to-end-belarus-sanctions/)
 - [Reform News, "Belarus Exported 11.6 Million Tonnes of Potash Fertilizers via Russian Ports"](https://reform.news/en/belarus-exported-11-6-million-tonnes-of-potash-fertilizers-via-russian-ports)
 
-**Sanktionsstatus maj 2026:** USA har 19 mars 2026 lättat sanktioner mot Belaruskali/BPC mot frigivning av 250 fångar. EU har förlängt sanktionerna ett år till. Belarus exporterade ändå 11,6 Mt potash 2025 via ryska Östersjöhamnar — ca 88 % av nivån före sanktionerna.
+**Sanktionsstatus maj 2026:** USA har 19 mars 2026 lättat sanktioner mot Belaruskali/BPC mot frigivning av 250 fångar. EU har förlängt sanktionerna ett år till. Belarus exporterade ändå 11,6 Mt pottaska 2025 via ryska Östersjöhamnar — ca 88 % av nivån före sanktionerna.
 
 ---
 
@@ -202,7 +202,7 @@ Sources:
 - [Wikipedia — 2026 Strait of Hormuz crisis](https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis)
 - [Al Jazeera — Hormuz commercial shipping status](https://www.aljazeera.com/features/2026/4/28/when-will-strait-of-hormuz-be-safe-for-commercial-shipping-again)
 - [World Bank Commodity Markets Outlook April 2026](https://www.worldbank.org/en/news/press-release/2026/04/28/commodity-markets-outlook-april-2026-press-release)
-- [Mining.com — Russia/Belarus potash exports](https://www.mining.com/web/global-potash-market-shrugs-off-us-move-to-end-belarus-sanctions/)
+- [Mining.com — Ryssland/Belarus pottaska-export](https://www.mining.com/web/global-potash-market-shrugs-off-us-move-to-end-belarus-sanctions/)
 - [Hespress — Morocco 70% phosphate reserves](https://en.hespress.com/85951-morocco-dominates-global-phosphate-reserves-with-70-share-finds-report.html)
 - [Trading Economics EU Natural Gas (TTF)](https://tradingeconomics.com/commodity/eu-natural-gas)
 - [AGSI+ live storage tracker](https://global-energy-flow.com/storage/)
