@@ -9,10 +9,10 @@ Snapshot taget vid research-passet **maj 2026**.
 
 **Påstående:** *"Hälften av jordens människor lever på en kemisk reaktion."*
 
-- Vaclav Smil, *Enriching the Earth* (2001): "Without the Haber-Bosch synthesis of ammonia about two-fifths of the world's population would not be around."
-- Smil uppskattar att andelen har stigit från ~44 % år 2000 → ~48 % år 2008 → drygt 50 % från 2025 och framåt.
-- Our World in Data har en interaktiv visualisering: ["How many people does synthetic fertilizer feed?"](https://ourworldindata.org/how-many-people-does-synthetic-fertilizer-feed)
-- [Smil's bok hos MIT Press](https://mitpress.mit.edu/9780262693134/enriching-the-earth/)
+- Akademisk konsensus: andelen har stigit från ~40 % vid millennieskiftet till drygt 50 % från mitten av 2020-talet, drivet av en växande befolkning som lever på spannmål från jordar gödslade med syntetiskt kväve.
+- [Our World in Data — "How many people does synthetic fertilizer feed?"](https://ourworldindata.org/how-many-people-does-synthetic-fertilizer-feed) (interaktiv visualisering med längre datatidsserier)
+- [Mackinac Center — Natural gas feeds half of humanity](https://www.mackinac.org/blog/2023/natural-gas-feeds-half-of-humanity)
+- [Anthropocene Magazine — Fertility Treatments](https://www.anthropocenemagazine.org/conservation/2013/03/fertility-treatments/)
 
 **Justering vs Grundbulten:** Grundbulten säger *"Utan NPK halveras världens skördar omedelbart"*. Det är för starkt formulerat. Korrekt är: utan syntetisk N-tillförsel skulle ungefär halva nuvarande befolkning sakna sin näringsmässiga bas. Det är inte samma sak som att skördarna halveras *omedelbart* — den verkliga mekanismen är att en gödselbrist en odlingssäsong sänker nästa skörd med 20–40 %.
 

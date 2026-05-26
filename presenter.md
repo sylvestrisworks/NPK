@@ -23,7 +23,7 @@ Vänta tills publiken ser hela hero-sidan, scrolla sedan in i Akt 1.
 **Skärm:** N, P, K-bokstäverna lyser upp en i taget när du scrollar.
 
 **Du säger på varje step:**
-- *Step 1 (alla bokstäver):* "Tre näringsämnen som varje gröda kräver i mängd. Smil har visat att ungefär hälften av världens befolkning får sin näring via syntetiskt kväve."
+- *Step 1 (alla bokstäver):* "Tre näringsämnen som varje gröda kräver i mängd. Ungefär hälften av världens befolkning står idag på näring som tillförts via syntetiskt kväve — alltså via Haber-Bosch-processen, gas och luft."
 - *Step 2 (N):* "Kväve tillverkas industriellt sedan 1909. Haber-Bosch tar väte från naturgas och kväve från luft. **70–80 % av tillverkningskostnaden är gaspriset.**"
 - *Step 3 (P):* "Fosfor bryts. **Marocko har 70 % av världens kända reserver.** Övriga producenter är Kina, USA, Ryssland. Reserverna räcker i 1 300 år vid nuvarande takt — men marknaden är extremt koncentrerad."
 - *Step 4 (K):* "Kalium bryts som pottaska. Kanada, Ryssland och Belarus är de tre stora. Bara Ryssland + Belarus stod för en tredjedel av världsexporten före 2022."
