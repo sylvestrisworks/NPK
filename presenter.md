@@ -12,7 +12,7 @@ Varje akt har: **(a)** *vad som visas på skärmen* och **(b)** *vad du säger u
 **Skärm:** Fullscreen-titel, "När gödsel blir geopolitik" + tre meningar som leder in till scroll.
 
 **Du säger:**
-> "Jag ska prata om något som vi inte vanligtvis hanterar i upphandlingsmöten — energi och geopolitik. Men det kommer landa konkret i vad vi betalar för spannmål, kött och grönt under nästa år. Häng med så scrollar vi från ammoniakreaktorn till matsedeln."
+> "Jag ska prata om något som vi inte vanligtvis hanterar i upphandlingsmöten, nämligen energi och geopolitik. Men det kommer landa konkret i vad vi betalar för spannmål, kött och grönt under nästa år. Häng med så scrollar vi från ammoniakreaktorn till matsedeln."
 
 Vänta tills publiken ser hela hero-sidan, scrolla sedan in i Akt 1.
 
@@ -23,13 +23,13 @@ Vänta tills publiken ser hela hero-sidan, scrolla sedan in i Akt 1.
 **Skärm:** N, P, K-bokstäverna lyser upp en i taget när du scrollar.
 
 **Du säger på varje step:**
-- *Step 1 (alla bokstäver):* "Tre näringsämnen som varje gröda kräver i mängd. Ungefär hälften av världens befolkning står idag på näring som tillförts via syntetiskt kväve — alltså via Haber-Bosch-processen, gas och luft."
+- *Step 1 (alla bokstäver):* "Tre näringsämnen som varje gröda kräver i mängd. Ungefär hälften av världens befolkning står idag på näring som tillförts via syntetiskt kväve, alltså via Haber-Bosch-processen, gas och luft."
 - *Step 2 (N):* "Kväve tillverkas industriellt sedan 1909. Haber-Bosch tar väte från naturgas och kväve från luft. **70–80 % av tillverkningskostnaden är gaspriset.**"
-- *Step 3 (P):* "Fosfor bryts. **Marocko har 70 % av världens kända reserver.** Övriga producenter är Kina, USA, Ryssland. Reserverna räcker i 1 300 år vid nuvarande takt — men marknaden är extremt koncentrerad."
+- *Step 3 (P):* "Fosfor bryts. **Marocko har 70 % av världens kända reserver.** Övriga producenter är Kina, USA, Ryssland. Reserverna räcker i 1 300 år vid nuvarande takt, men marknaden är extremt koncentrerad."
 - *Step 4 (K):* "Kalium bryts som pottaska. Kanada, Ryssland och Belarus är de tre stora. Bara Ryssland + Belarus stod för en tredjedel av världsexporten före 2022."
 - *Step 5 (emphasis):* "Bekymret är inte att näringen tar slut. Bekymret är att den hänger på ett fåtal länder och ett fåtal hamnar."
 
-**Frågor som kan komma:** "Räcker inte stallgödsel?" → Svar: "I dagens skala, nej — vi har inte djur nog. Stallgödsel täcker globalt ~10 % av kvävebehovet."
+**Frågor som kan komma:** "Räcker inte stallgödsel?" → Svar: "I dagens skala, nej. Vi har inte djur nog. Stallgödsel täcker globalt ~10 % av kvävebehovet."
 
 ---
 
@@ -39,9 +39,9 @@ Vänta tills publiken ser hela hero-sidan, scrolla sedan in i Akt 1.
 
 **Du säger:**
 - *Step 1:* "Före 2022 var Ryssland + Belarus tunga aktörer i hela NPK-kedjan. Naturgas till kvävetillverkning, fosfat, framför allt pottaska."
-- *Step 2:* "Sanktionerna efter Ukraina-invasionen vred om kranar nästan över en natt. Europa tappade sin största gasleverantör — och därmed grunden för sin egen kvävegödseltillverkning. Yara körde europeisk ammoniakproduktion på 35 % under 2022."
+- *Step 2:* "Sanktionerna efter Ukraina-invasionen vred om kranar nästan över en natt. Europa tappade sin största gasleverantör, och därmed grunden för sin egen kvävegödseltillverkning. Yara körde europeisk ammoniakproduktion på 35 % under 2022."
 - *Step 3:* "Flödena dirigerades om. Qatar, Saudiarabien, Oman, Marocko, Egypten tog över ledet. Det är där vi köper idag."
-- *Step 4 (emphasis):* "Resultatet är ett system utan marginal — och alla nya leverantörer skeppar via samma vatten."
+- *Step 4 (emphasis):* "Resultatet är ett system utan marginal, och alla nya leverantörer skeppar via samma vatten."
 
 ---
 
@@ -70,52 +70,50 @@ Vänta tills publiken ser hela hero-sidan, scrolla sedan in i Akt 1.
 
 **Du säger:**
 - *Step 1:* "Här är varför ni inte ser några dramatiska prisökningar i butik ännu. Efter ryska gasstoppen 2022 byggde Europa upp historiskt stora lager. Vi tär på dem just nu."
-- *Step 2 (titta på diagrammet):* "Men marginalerna är tunna. Vi är på 37 % fyllnadsgrad — mot 44 % samma datum i fjol. Det formella 90-procentsmålet inför vintern har lättats till 80 %, och vi missar även det vid nuvarande takt."
-- *Step 3:* "Marknaden är global. När Asien tappat sin gasimport börjar de buda upp varenda tillgänglig leverans. TTF-gasen är upp 25 % på året. Världsbanken prognostiserar gödselpriser plus 31 % under 2026 — urea plus 60 %."
+- *Step 2 (titta på diagrammet):* "Men marginalerna är tunna. Vi är på 37 % fyllnadsgrad, mot 44 % samma datum i fjol. Det formella 90-procentsmålet inför vintern har lättats till 80 %, och vi missar även det vid nuvarande takt."
+- *Step 3:* "Marknaden är global. När Asien tappat sin gasimport börjar de buda upp varenda tillgänglig leverans. TTF-gasen är upp 25 % på året. Världsbanken prognostiserar gödselpriser plus 31 % under 2026, urea plus 60 %."
 - *Step 4 (infrastrukturen):* "Och här är det viktiga: även om sundet öppnas i morgon är problemet inte löst. LNG-anläggningar i Qatar har fysiska skador. **IEA räknar med ~120 miljarder kubikmeter LNG som försvinner kumulativt mellan 2026 och 2030.** Den globala kapacitetsvågen försenas med minst två år."
 - *Step 5 (emphasis):* "Sex till tolv månaders eftersläpning till konsumentpriset. Räkna med att de värsta påslagen landar hösten 2026 till våren 2027. Och inte återgår till 'normalt' på flera år."
 - *Step 6 (historisk parallell):* "Vi har sett exakt denna kedja förut. 2022 steg TTF från 12 till över 340 EUR/MWh. Yaras gaskostnad nästan tredubblades, de skar ammoniakproduktionen med 35 %, **och svenska livsmedelspriser landade på +18,6 % december mot december**. Två år senare ligger vi fortfarande +24 % över augusti 2021."
 
-**Pausa här.** Detta är den bit ledningsgruppen kommer reagera på — siffrorna är konkreta och baseras på något de minns.
+**Pausa här.** Detta är den bit ledningsgruppen kommer reagera på. Siffrorna är konkreta och baseras på något de minns.
 
 ---
 
 ## Akt 5 · Vad det betyder för oss (5 min)
 
-**Skärm:** Fem små grafer i ett rutnät — en per kategori (spannmål, mejeri, frilandsgrönt, växthus, importerad eko). Etiketter markerar om gapet *krymper, stänger eller vidgas*. Markerade kategorier lyfts fram per step.
+**Skärm:** Fem små grafer i ett rutnät, en per kategori (spannmål, mejeri, frilandsgrönt, växthus, importerad eko). Markerade kategorier lyfts fram per step.
 
 **Du säger:**
 - *Step 1:* "Konventionellt jordbruk är direkt exponerat. Spannmål, grönsaker, mjölk och kött — allt vi köper i ton-volymer — följer med när NPK blir dyrare. Urea i mars var det dyraste på fyra år."
-- *Step 2 (eko som kretslopp):* "Ekologiskt jordbruk är byggt kring något annat — kretslopp i stället för insatsvaror. Inget syntetiskt NPK. Bördighet byggs upp med växtföljd, baljväxter som biologiskt fixerar kväve direkt ur luften, stallgödsel och kompost. Det är en gårdsekonomi som producerar sin egen näring istället för att köpa den från en global energimarknad — och därför rör sig ekos kostnadsbild långsammare när gas och olja rusar."
-- *Step 3 (nyans):* "Men eko är inte immunt — och inte på samma sätt överallt. Diesel, transport, växthusvärme, foder, stallgödseltillgång. Jordbruksdiesel är upp 46 % sedan februari. Frågan är därför kategori för kategori: *var bär kretsloppslogiken, och var bryter den?*"
-- *Step 4 (där gapet krymper):* "På spannmål, baljväxter, mejeri, kött och frilandsgrönt har eko sin styrka. NPK är en stor andel av konventionella kostnader, och eko bär den biten internt. **Gapet krymper — på frilandsgrönt och rotfrukter kan det nästan stänga.** Men crossing — att eko blir absolut billigare — är osannolikt generellt. Vi pratar konvergens, inte överkörning."
-- *Step 5 (där gapet vidgas):* "Och här är det viktiga: i växthus dominerar uppvärmning kostnadsbilden. Eko har inget skydd där — snarare högre energiåtgång per producerad enhet. På importerad eko-frukt äter transport- och kylkostnader upp eko-fördelen. *Här kan gapet tvärtom vidgas.*"
-- *Step 6 (emphasis):* "Den klassiska upphandlingslogiken — 'eko är dyrare, så vi tar konventionellt där vi kan' — håller inte rakt av. Men crossing är inte heller huvudregeln. **Räkneövningen behöver göras om — kategori för kategori.**"
-- *Step 7 (tre kanaler):* "Och det är därför konv hamnar i kläm samtidigt på flera sätt: energichocken slår genom via tre parallella kanaler. Insatsvarukanalen — gas blir gödsel. Bränslekanalen — olja blir diesel. Förädlingskanalen — gas och el blir torkning, mejeri, kyla. Eko skyddas mot den första kanalen men inte mot de andra två."
+- *Step 2 (eko som kretslopp):* "Ekologiskt jordbruk är byggt kring något annat: kretslopp i stället för insatsvaror. Inget syntetiskt NPK. Bördighet byggs upp med växtföljd, baljväxter som biologiskt fixerar kväve direkt ur luften, stallgödsel och kompost. Det är en gårdsekonomi som producerar sin egen näring istället för att köpa den från en global energimarknad, och därför rör sig ekos kostnadsbild långsammare när gas och olja rusar."
+- *Step 3 (nyans):* "Men eko är inte immunt, och inte på samma sätt överallt. Diesel, transport, växthusvärme, foder, stallgödseltillgång. Jordbruksdiesel är upp 46 % sedan februari. Frågan är därför kategori för kategori: *var bär kretsloppslogiken, och var bryter den?*"
+- *Step 4 (där gapet krymper):* "På spannmål, baljväxter, mejeri, kött och frilandsgrönt har eko sin styrka. NPK är en stor andel av konventionella kostnader, och eko bär den biten internt. **Gapet krymper, och på frilandsgrönt och rotfrukter kan det nästan stänga.** Men crossing — att eko blir absolut billigare — är osannolikt generellt. Vi pratar konvergens, inte överkörning."
+- *Step 5 (där gapet vidgas):* "Och här är det viktiga: i växthus dominerar uppvärmning kostnadsbilden. Eko har inget skydd där, snarare högre energiåtgång per producerad enhet. På importerad eko-frukt äter transport- och kylkostnader upp eko-fördelen. *Här kan gapet tvärtom vidgas.*"
+- *Step 6 (emphasis):* "Den klassiska upphandlingslogiken — 'eko är dyrare, så vi tar konventionellt där vi kan' — håller inte rakt av. Men crossing är inte heller huvudregeln. **Räkneövningen behöver göras om: kategori för kategori.**"
+- *Step 7 (tre kanaler):* "Och det är därför konv hamnar i kläm samtidigt på flera sätt: energichocken slår genom via tre parallella kanaler. Insatsvarukanalen: gas blir gödsel. Bränslekanalen: olja blir diesel. Förädlingskanalen: gas och el blir torkning, mejeri, kyla. Eko skyddas mot den första kanalen men inte mot de andra två."
 
 ---
 
-## Akt 6 · Var vi står — och var vi går (4 min)
+## Akt 6 · Var vi står, och var vi går (4 min)
 
-**Skärm:** Två sektioner — "redan på plats" (4 gröna kort) och "framåt" (en stor framträdande ruta + två mindre).
+**Skärm:** Två sektioner: "redan på plats" (4 gröna kort) och "framåt" (en stor framträdande ruta om höstens upphandling).
 
-**Du säger — del 1, vad vi redan har:**
+**Vad du säger om vad vi redan har:**
 - "Det här är inte en chock vi möter oförberedda. Flera av de val vi gjort de senaste åren betalar tillbaka just nu."
 - Gå igenom de fyra gröna korten:
-  - **Hög andel eko:** "Vi sitter redan tungt i eko — och det är exakt de kategorier där gapet mot konventionellt nu krymper. Vi är på rätt sida av räkneövningen."
+  - **Hög andel eko:** "Vi sitter redan tungt i eko, och det är exakt de kategorier där gapet mot konventionellt nu krymper. Vi är på rätt sida av räkneövningen."
   - **Lågt svinn:** "Lågt matsvinn är dold prishöjningsabsorption. Varje procent svinn vi kapat motsvarar en procent billigare råvara, utan att förhandla med en enda leverantör."
   - **Lokalt först:** "Vi har flyttat upphandling närmare hemmaplan över flera år. Det skyddar oss mot transport- och importchocker."
   - **Flexibla menyer:** "Den enskilt viktigaste spaken i prischock är att kunna växla mellan kategorier utan att tappa kvalitet eller gäster. Vi har den spaken redan i händerna."
 
 **Pausa kort.** Ledningsgruppen ska hinna nicka.
 
-**Du säger — del 2, vad vi gör framåt:**
+**Vad du säger om vad vi siktar mot:**
 - "Men styrkan ger oss en chans, och chansen heter höstens upphandling."
-- **Höstens stora upphandling (det stora amberkortet):** "Avtalen vi tecknar i höst löper rakt igenom det fönster när konsumentpriserna sannolikt rör sig — hösten 2026 till våren 2027. Det är vårt enskilt största tillfälle att ligga i framkant. Låsa volymer, säkra eko-leverantörer på rätt kategorier, förhandla prismekanismer innan konkurrensen om kontrakten hettar upp."
-- **Räkna om per kategori:** "Spannmål, mejeri, kött, friland — där höjer vi eko-andelen kostnadsneutralt om vi räknar rätt. Växthus och importerad eko går åt andra hållet — där backar vi."
-- **Vad vi följer månadsvis:** "EU gaslager, TTF-gas, Världsbankens Pink Sheet, Hormuz-trafik, Qatars LNG-infrastruktur. Månatlig avstämning i ledningsgruppen."
+- **Höstens stora upphandling:** "Avtalen vi tecknar i höst löper rakt igenom det fönster när konsumentpriserna sannolikt rör sig: hösten 2026 till våren 2027. Det är vårt enskilt största tillfälle att ligga i framkant. Att låsa volymer, säkra eko-leverantörer på rätt kategorier och förhandla prismekanismer innan konkurrensen om kontrakten skärps."
 
-Avsluta: "Det vi behöver besluta idag är inte hur vi ska panika när priset rör sig — vi har resiliensen. Det vi behöver besluta är att höstens upphandling planeras *med* den här analysen i ryggen, inte vid sidan av."
+Avsluta: "Det vi behöver besluta idag är inte hur vi ska panika när priset rör sig. Vi har resiliensen. Det vi behöver besluta är att höstens upphandling planeras *med* den här analysen i ryggen, inte vid sidan av."
 
 ---
 
