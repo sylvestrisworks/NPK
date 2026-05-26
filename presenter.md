@@ -95,19 +95,27 @@ Vänta tills publiken ser hela hero-sidan, scrolla sedan in i Akt 1.
 
 ---
 
-## Akt 6 · Vad vi gör nu (4 min)
+## Akt 6 · Var vi står — och var vi går (4 min)
 
-**Skärm:** Fyra rekommendationsrutor i ett grid.
+**Skärm:** Två sektioner — "redan på plats" (4 gröna kort) och "framåt" (en stor framträdande ruta + två mindre).
 
-**Du säger:**
-- "Det här är inte en kris vi kan förhandla bort. Men vi har spakar."
-- Gå igenom korten kortfattat:
-  - **Inköp:** "Se över avtalsdurationer. Diskutera prisindexering med leverantörer för hösten 2026. Identifiera vår NPK-exponering per råvarukategori."
-  - **Meny:** "Förbered scenarier där köttandelen sänks vid pristoppar — foder är det mest exponerade ledet. Räkna på baljväxter, rotfrukter och säsongsgrönt som buffert."
-  - **Eko-andelen:** "Om prisgapet krymper — när blir det kostnadsneutralt att höja eko-andelen? Vi vill räkna det innan andra upphandlare hinner före."
-  - **Vad vi följer:** "EU gaslager, TTF-gas, Världsbankens Pink Sheet, Lloyd's List på Hormuz. Vi sätter upp en månadsuppföljning."
+**Du säger — del 1, vad vi redan har:**
+- "Det här är inte en chock vi möter oförberedda. Flera av de val vi gjort de senaste åren betalar tillbaka just nu."
+- Gå igenom de fyra gröna korten:
+  - **Hög andel eko:** "Vi sitter redan tungt i eko — och det är exakt de kategorier där gapet mot konventionellt nu krymper. Vi är på rätt sida av räkneövningen."
+  - **Lågt svinn:** "Lågt matsvinn är dold prishöjningsabsorption. Varje procent svinn vi kapat motsvarar en procent billigare råvara, utan att förhandla med en enda leverantör."
+  - **Lokalt först:** "Vi har flyttat upphandling närmare hemmaplan över flera år. Det skyddar oss mot transport- och importchocker."
+  - **Flexibla menyer:** "Den enskilt viktigaste spaken i prischock är att kunna växla mellan kategorier utan att tappa kvalitet eller gäster. Vi har den spaken redan i händerna."
 
-Avsluta med: "Det vi behöver besluta idag är inte vad vi gör — utan att vi börjar mäta och scenarioplanera nu, så att vi är förberedda när priserna börjar röra sig."
+**Pausa kort.** Ledningsgruppen ska hinna nicka.
+
+**Du säger — del 2, vad vi gör framåt:**
+- "Men styrkan ger oss en chans, och chansen heter höstens upphandling."
+- **Höstens stora upphandling (det stora amberkortet):** "Avtalen vi tecknar i höst löper rakt igenom det fönster när konsumentpriserna sannolikt rör sig — hösten 2026 till våren 2027. Det är vårt enskilt största tillfälle att ligga i framkant. Låsa volymer, säkra eko-leverantörer på rätt kategorier, förhandla prismekanismer innan konkurrensen om kontrakten hettar upp."
+- **Räkna om per kategori:** "Spannmål, mejeri, kött, friland — där höjer vi eko-andelen kostnadsneutralt om vi räknar rätt. Växthus och importerad eko går åt andra hållet — där backar vi."
+- **Vad vi följer månadsvis:** "EU gaslager, TTF-gas, Världsbankens Pink Sheet, Hormuz-trafik, Qatars LNG-infrastruktur. Månatlig avstämning i ledningsgruppen."
+
+Avsluta: "Det vi behöver besluta idag är inte hur vi ska panika när priset rör sig — vi har resiliensen. Det vi behöver besluta är att höstens upphandling planeras *med* den här analysen i ryggen, inte vid sidan av."
 
 ---
 

@@ -649,36 +649,95 @@ a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
   border-top: 1px solid var(--rule);
 }
 
+.rec-section-title {
+  font-family: var(--sans);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+  max-width: 80rem;
+  margin: 3rem auto 1.2rem;
+}
+
+.rec-section-title:first-of-type { margin-top: 1rem; }
+
 .rec-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-  gap: 2.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  gap: 1.6rem;
   max-width: 80rem;
-  margin: 0 auto;
+  margin: 0 auto 1.5rem;
 }
 
 .rec-card {
   background: var(--bg);
-  padding: 2rem;
+  padding: 1.8rem 1.8rem 1.6rem;
   border: 1px solid var(--rule);
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
-.rec-card h3 {
+.rec-tag {
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-weight: 600;
   color: var(--accent-green);
-  margin-bottom: 1rem;
-  padding-bottom: 0.6rem;
-  border-bottom: 1px solid var(--rule);
+  margin-bottom: 0.6em;
+  display: inline-block;
+}
+
+.rec-tag-next { color: var(--accent-red); }
+
+.rec-card h3 {
+  color: var(--ink);
+  margin: 0 0 0.7em 0;
+  padding: 0;
+  border: none;
+  font-size: 1.25rem;
+}
+
+.rec-card p {
+  font-size: 0.98rem;
+  line-height: 1.55;
+  margin: 0;
 }
 
 .rec-card ul {
   margin: 0;
   padding-left: 1.2rem;
-  font-size: 0.98rem;
+  font-size: 0.95rem;
   line-height: 1.55;
 }
 
-.rec-card li { margin-bottom: 0.7em; }
+.rec-card li { margin-bottom: 0.4em; }
 .rec-card li:last-child { margin-bottom: 0; }
+
+/* "Done" cards get a green left edge */
+.rec-card.rec-done {
+  border-left: 4px solid var(--accent-green);
+}
+
+/* "Next" cards get amber edge */
+.rec-card.rec-next {
+  border-left: 4px solid var(--accent-amber);
+}
+
+/* The headline next card takes the full width and a stronger visual */
+.rec-card.rec-headline {
+  grid-column: 1 / -1;
+  background: var(--ink);
+  color: var(--bg);
+  border-left: 4px solid var(--accent-amber);
+}
+
+.rec-card.rec-headline h3 { color: var(--bg); }
+.rec-card.rec-headline p { color: rgba(250, 248, 244, 0.92); }
+.rec-card.rec-headline strong { color: var(--accent-amber); }
+.rec-card.rec-headline .rec-tag { color: var(--accent-amber); }
 
 /* ============================================================
    AKT 7 — Källor & motargument
