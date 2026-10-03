@@ -12,7 +12,7 @@
 
 - **Krisen är djupare och mer utdragen än vi räknade med i maj.** Sundet är i praktiken fortfarande stängt efter en kort öppning i juni–juli. Gaspriset (TTF) är upp omkring 130 % sedan årsskiftet, och EU:s gaslager går in i vintern på drygt 70 %.
 - **En länk i kedjan har försvagats: kvävegödseln.** Världsmarknadspriset på urea är tillbaka på januarinivå, främst för att Kina återupptog exporten och för att bönderna slutade köpa. I Europa är kvävet däremot fortsatt dyrt att tillverka, och fosfor har aldrig gått ner.
-- **Kostnaderna stiger i leverantörsledet men har ännu inte nått våra avtalspriser.** Producentpriserna är upp 6,8 % på ett år. Konjunkturinstitutet räknar med att energipriserna slår igenom i matpriserna under vintern och våren, alltså i det fönster vi pekade ut i maj.
+- **Kostnaderna stiger i leverantörsledet men har ännu inte nått våra avtalspriser.** Producentpriserna i Sverige är upp 6,8 % på ett år, och sex av tio livsmedelsföretag har fått högre produktionskostnader. Konjunkturinstitutet räknar med att energipriserna slår igenom i matpriserna under vintern och våren, alltså i det fönster vi pekade ut i maj.
 - **Eko-gapet krymper där vi trodde att det skulle krympa.** Arlas eko-tillägg på mjölk har gått från +45 % till +31 % sedan januari. Drivkraften är energi och diesel snarare än gödsel.
 - **Upphandlingsmarknaden har förändrats.** Konkurrensverket utreder de två största grossisterna för misstänkt samordning kring prisjusteringar och anbud, och branschöverenskommelsen är pausad. Det ger oss större möjlighet att själva sätta villkoren i höstens upphandling, men också en risk för få anbud.
 
@@ -48,8 +48,15 @@
 | **TTF-gas** 46,6 €/MWh, upp 25 % på ett år. | Över 80 €/MWh i september, omkring +130 % sedan årsskiftet. | **Värre än vi trodde** |
 | **Qatars LNG:** IEA räknar med ~120 Gm³ förlorad kapacitet 2026–2030. | IEA har höjt till 140 Gm³, och det under antagandet att sundet öppnar under tredje kvartalet, vilket inte har skett. 17 % av Qatars exportkapacitet är utslagen, och reparationerna kan ta upp till fem år. | **Stämmer**, och värre |
 | **Gödsel:** Världsbanken räknar med +31 % för 2026, urea +60 %. | Urea toppade på 935–960 $/t i april och ligger nu kring 400 $/t, ungefär januarinivå. Världsbankens gödselindex låg i juli under nivån ett år tidigare. Fosfat är fortsatt dyrt. | **Avviker** |
-| **Matpriser:** 6–12 månaders eftersläpning, de största påslagen hösten 2026 till våren 2027. | Producentpriserna +6,8 % på ett år, medan priserna längre fram i kedjan ännu inte har rört sig. KI väntar genomslag under vintern och våren. | **Inte avgjort**, fönstret öppnar nu |
+| **Matpriser:** 6–12 månaders eftersläpning, de största påslagen hösten 2026 till våren 2027. | Producentpriserna totalt +6,8 % på ett år, och sex av tio livsmedelsföretag har fått högre kostnader. Priserna längre fram i kedjan har ännu inte rört sig. KI väntar genomslag under vintern och våren. | **Inte avgjort**, fönstret öppnar nu |
 | **Eko mot konventionellt:** gapet krymper på mejeri, spannmål och frilandsgrönt. | Arlas eko-tillägg på mjölk har krympt från +45 % till +31 % sedan januari. | **Stämmer**, så här långt |
+
+### Vad vi hade fel om
+
+- **Vi överskattade hur mycket världspriset på kvävegödsel följer europeisk gas.** Det sätts av den billigaste exportören, och Kina kan ändra bilden snabbt.
+- **Vi underskattade energisidan.** Gaspriset har stigit betydligt mer än vi räknade med.
+- **Vi underskattade hur seg krisen kan bli.** En öppning kom, men den höll i tre veckor.
+- **Vi pratade om priser men inte om upphandlingsmarknaden.** Utredningen av grossisterna och den pausade branschöverenskommelsen påverkar höstens upphandling minst lika mycket som gaspriset.
 
 > **+130 %**
 > TTF-gaspriset sedan årsskiftet. I maj räknade vi med +25 % på ett år.
@@ -80,15 +87,15 @@ Ureapriset steg som vi förutsåg, men bara fram till april. Sedan dess har det 
 
 *Det syns inte i våra priser ännu, men det byggs upp bakåt i kedjan.*
 
-- **Producentpriserna är upp 6,8 % på ett år** (augusti). Sex av tio livsmedelsföretag har fått högre produktionskostnader under första halvåret.
+- **Producentpriserna i Sverige är upp 6,8 % på ett år** (augusti, samtliga varor), och priserna steg även inom livsmedel under månaden. Sex av tio livsmedelsföretag har fått högre produktionskostnader under första halvåret.
 - **Producenterna har inte fått föra vidare kostnaderna.** Enligt Livsmedelsföretagen har dagligvaruhandeln stoppat prishöjningar under våren och sommaren. Kostnaderna har alltså stannat hos producenterna.
 - **Trycket kommer att släppa någonstans.** Höstens förhandlingar i livsmedelskedjan beskrivs i branschpressen som nästa prövning. Konjunkturinstitutet räknar med att matpriserna stiger omkring 5 % från septembernivån till slutet av 2027, med energin som drivkraft under vintern och våren.
 - **Vår bedömning:** Producenter som inte fått igenom höjningar mot dagligvaruhandeln kommer att försöka ta igen marginalen i andra kanaler, däribland storhushåll och offentliga avtal. Höstens anbud kommer sannolikt att prissätta in både de kostnader som redan finns och en riskpremie för vintern.
 
 **Ett varningsord om KPI:** KPI livsmedel visar −6,6 % på ett år, men det beror nästan helt på den sänkta matmomsen. Den påverkar inte vår budget, eftersom vi får momsen kompenserad, och säger därför lite om vår kostnadsutveckling. Men den påverkar oss på ett annat sätt: avtal som indexeras mot KPI livsmedel får en sänkning på omkring 5,4 % från april 2026, och en höjning på omkring 5,7 % när momsen återgår vid årsskiftet 2027/2028, utan att leverantörens kostnader har ändrats. Det är viktigt för vilket index vi väljer i höstens upphandling.
 
-> **+6,8 %**
-> producentpriserna på ett år. Kostnaderna finns redan i kedjan, de har bara inte nått våra avtal ännu.
+> **6 av 10**
+> livsmedelsföretag har fått högre produktionskostnader i år. Kostnaderna finns redan i kedjan, de har bara inte nått våra avtal ännu.
 
 ---
 
@@ -175,6 +182,13 @@ Oljepris och fraktkostnader går ner relativt snabbt, och gaspriset lättar. Men
 
 *Slutsatsen från maj står sig: avtalen vi tecknar nu löper rakt genom prisfönstret. Men marknaden vi går ut på har förändrats.*
 
+### Det som håller
+
+- **Hög andel eko.** Vi sitter tungt i de kategorier där gapet nu krymper, och mejeri visar det redan.
+- **Lågt svinn.** Varje procentenhet mindre svinn är fortfarande en procentenhet billigare råvara.
+- **Lokalt först.** Med dyrare diesel och frakt är det värt mer nu än i maj, och delområden i upphandlingen gör det lättare att få lokala anbud.
+- **Flexibla menyer.** Den viktigaste spaken när priserna börjar röra sig i vinter, förutsatt att avtalet tillåter den.
+
 ### Marknaden vi går ut på
 
 - **Leverantörer med stigande kostnader.** De kommer att vilja prissätta in både dagens kostnader och osäkerheten om vintern. Ju mer risk vi lägger på dem, desto högre riskpremie i anbuden.
@@ -218,22 +232,6 @@ Oljepris och fraktkostnader går ner relativt snabbt, och gaspriset lättar. Men
 **Om underlaget redan är annonserat:** Ändringar som kan påverka vilka som lämnar anbud kräver rättelse och förlängd anbudstid, eller att upphandlingen görs om. Mindre förtydliganden kan göras via frågor och svar. Prioritera i så fall prisjusteringsklausulen och valet av index.
 
 **Om befintliga avtal indexeras mot KPI livsmedel:** Kontrollera att momssänkningen från april har slagit igenom som en sänkning i våra priser.
-
-### Det som håller
-
-- **Hög andel eko.** Vi sitter tungt i de kategorier där gapet nu krymper, och mejeri visar det redan.
-- **Lågt svinn.** Varje procentenhet mindre svinn är fortfarande en procentenhet billigare råvara.
-- **Lokalt först.** Med dyrare diesel och frakt är det värt mer nu än i maj, och delområden i upphandlingen gör det lättare att få lokala anbud.
-- **Flexibla menyer.** Den viktigaste spaken när priserna börjar röra sig i vinter, förutsatt att avtalet tillåter den.
-
----
-
-## Vad vi hade fel om
-
-- **Vi överskattade hur mycket världspriset på kvävegödsel följer europeisk gas.** Det sätts av den billigaste exportören, och Kina kan ändra bilden snabbt.
-- **Vi underskattade energisidan.** Gaspriset har stigit betydligt mer än vi räknade med.
-- **Vi underskattade hur seg krisen kan bli.** En öppning kom, men den höll i tre veckor.
-- **Vi pratade om priser men inte om upphandlingsmarknaden.** Utredningen av grossisterna och den pausade branschöverenskommelsen påverkar höstens upphandling minst lika mycket som gaspriset.
 
 ---
 

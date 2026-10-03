@@ -1,0 +1,1139 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>När gödsel blir geopolitik · Uppföljning oktober 2026</title>
+  <meta name="description" content="Uppföljning till ledningsgruppen för Måltidsservice: vad som hänt sedan dragningen i maj 2026 och vad vi tror ligger framför oss inför höstens upphandling." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..800,30;1,9..144,400..800,30&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    /* ============================================================
+       Uppföljning oktober 2026 · tryckversion (A4)
+       Samma tokens och komponenter som presentationen (style.css)
+       ============================================================ */
+    :root {
+      --bg: #faf8f4;
+      --bg-warm: #f0ece2;
+      --ink: #1c1c1a;
+      --ink-soft: #4a4a47;
+      --rule: #d8d3c6;
+      --accent-green: #3f6b3f;
+      --accent-red: #b1442c;
+      --accent-amber: #c98a2a;
+      --serif: "Fraunces", "Source Serif 4", Georgia, "Times New Roman", serif;
+      --sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+    }
+
+    @page {
+      size: A4;
+      margin: 16mm 18mm 15mm 18mm;
+      background: #faf8f4;
+      @bottom-left {
+        content: "När gödsel blir geopolitik · Uppföljning oktober 2026";
+        font-family: "Inter", sans-serif;
+        font-size: 7pt;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #4a4a47;
+      }
+      @bottom-right {
+        content: counter(page);
+        font-family: "Inter", sans-serif;
+        font-size: 7.5pt;
+        color: #4a4a47;
+      }
+    }
+    @page full {
+      margin: 0;
+      @bottom-left { content: none; }
+      @bottom-right { content: none; }
+    }
+    @page warm {
+      background: #f0ece2;
+    }
+
+    * { box-sizing: border-box; }
+    html { font-optical-sizing: auto; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--serif);
+      font-size: 10pt;
+      line-height: 1.46;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    h1, h2, h3 {
+      font-family: var(--serif);
+      font-weight: 700;
+      font-variation-settings: "opsz" 96, "SOFT" 30;
+      letter-spacing: -0.015em;
+      margin: 0 0 0.6em 0;
+      line-height: 1.12;
+    }
+    h2 { font-size: 28pt; }
+    h3 { font-size: 13pt; }
+    p { margin: 0 0 0.9em 0; }
+    strong { font-weight: 700; }
+    a { color: var(--ink); text-decoration: none; }
+
+    .kicker, .act-num {
+      font-family: var(--sans);
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 7.5pt;
+      font-weight: 500;
+      color: var(--ink-soft);
+      margin: 0 0 1.1em 0;
+    }
+
+    /* ---------- Sidstruktur ---------- */
+    .act { break-before: page; }
+    .act-intro {
+      margin: 0 0 5mm 0;
+      padding-top: 3.5mm;
+      border-top: 1px solid var(--rule);
+    }
+    .act-blurb {
+      font-size: 12.5pt;
+      color: var(--ink-soft);
+      line-height: 1.4;
+      max-width: 135mm;
+      margin: 0;
+    }
+    .section-title {
+      font-family: var(--sans);
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-size: 7.5pt;
+      font-weight: 600;
+      color: var(--ink-soft);
+      margin: 5mm 0 2.5mm;
+      break-after: avoid;
+    }
+    .lede {
+      font-size: 11pt;
+      line-height: 1.5;
+      max-width: 150mm;
+    }
+
+    /* ---------- Omslag (hero) ---------- */
+    .hero {
+      page: full;
+      height: 297mm;
+      padding: 30mm 22mm 24mm;
+      display: flex;
+      flex-direction: column;
+      background:
+        radial-gradient(ellipse at top right, rgba(63, 107, 63, 0.10), transparent 60%),
+        radial-gradient(ellipse at bottom left, rgba(177, 68, 44, 0.08), transparent 55%),
+        var(--bg);
+    }
+    .hero-eyebrow {
+      font-family: var(--sans);
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      font-size: 8pt;
+      font-weight: 600;
+      color: var(--accent-amber);
+      margin: 38mm 0 6mm;
+    }
+    .hero-title {
+      font-size: 62pt;
+      font-variation-settings: "opsz" 144, "SOFT" 30;
+      line-height: 1.02;
+      letter-spacing: -0.025em;
+      margin: 0 0 12mm 0;
+    }
+    .hero-lede {
+      font-size: 15pt;
+      line-height: 1.5;
+      color: var(--ink-soft);
+      max-width: 150mm;
+      margin: 0;
+    }
+    .hero-lede p { margin: 0 0 0.35em 0; }
+    .hero-foot {
+      margin-top: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      border-top: 1px solid var(--rule);
+      padding-top: 5mm;
+      font-family: var(--sans);
+      font-size: 7.5pt;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+    }
+    .hero-foot em { font-family: var(--serif); text-transform: none; letter-spacing: 0; font-size: 9.5pt; }
+
+    /* ---------- Kort sagt ---------- */
+    .summary { break-before: page; }
+    .summary h2 { font-size: 26pt; margin-bottom: 8mm; }
+    .summary-list { list-style: none; margin: 0; padding: 0; counter-reset: s; }
+    .summary-list li {
+      counter-increment: s;
+      display: grid;
+      grid-template-columns: 14mm 1fr;
+      gap: 0 4mm;
+      padding: 5mm 0;
+      border-top: 1px solid var(--rule);
+      break-inside: avoid;
+    }
+    .summary-list li:last-child { border-bottom: 1px solid var(--rule); }
+    .summary-list li::before {
+      content: counter(s);
+      font-family: var(--serif);
+      font-variation-settings: "opsz" 144, "SOFT" 30;
+      font-weight: 700;
+      font-size: 26pt;
+      line-height: 1;
+      color: var(--accent-amber);
+    }
+    .summary-list h3 { font-size: 13pt; margin: 0 0 0.35em; }
+    .summary-list p { margin: 0; color: var(--ink-soft); }
+
+    /* ---------- Tidslinje (Akt 1) ---------- */
+    .timeline { list-style: none; margin: 0; padding: 0; position: relative; }
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 31mm;
+      top: 2mm;
+      bottom: 2mm;
+      width: 1px;
+      background: var(--rule);
+    }
+    .timeline li {
+      display: grid;
+      grid-template-columns: 27mm 8mm 1fr;
+      padding: 2.6mm 0;
+      break-inside: avoid;
+    }
+    .timeline .when {
+      font-family: var(--sans);
+      font-size: 7.5pt;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--ink-soft);
+      padding-top: 0.25em;
+    }
+    .timeline .dot {
+      position: relative;
+    }
+    .timeline .dot::after {
+      content: "";
+      position: absolute;
+      left: 2.6mm;
+      top: 1.3mm;
+      width: 2.8mm;
+      height: 2.8mm;
+      border-radius: 50%;
+      background: var(--bg);
+      border: 1.5px solid var(--ink);
+    }
+    .timeline li.conflict .dot::after { border-color: var(--accent-red); background: var(--accent-red); }
+    .timeline li.market .dot::after { border-color: var(--accent-amber); background: var(--accent-amber); }
+    .timeline li.procure .dot::after { border-color: var(--accent-green); background: var(--accent-green); }
+    .timeline .what { margin: 0; }
+    .legend {
+      display: flex;
+      gap: 6mm;
+      margin: 0 0 5mm;
+      font-family: var(--sans);
+      font-size: 7.5pt;
+      color: var(--ink-soft);
+    }
+    .legend span::before {
+      content: "";
+      display: inline-block;
+      width: 2.4mm;
+      height: 2.4mm;
+      border-radius: 50%;
+      margin-right: 1.6mm;
+      vertical-align: -0.1mm;
+    }
+    .legend .l-conflict::before { background: var(--accent-red); }
+    .legend .l-market::before { background: var(--accent-amber); }
+    .legend .l-procure::before { background: var(--accent-green); }
+    .legend .l-other::before { border: 1.5px solid var(--ink); width: 1.8mm; height: 1.8mm; }
+
+    /* ---------- Tabeller ---------- */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0 0 4mm;
+      font-size: 9pt;
+      line-height: 1.4;
+    }
+    thead th {
+      font-family: var(--sans);
+      font-size: 7pt;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--ink-soft);
+      text-align: left;
+      padding: 0 3mm 2mm 0;
+      border-bottom: 1.5px solid var(--ink);
+    }
+    tbody td {
+      vertical-align: top;
+      padding: 1.6mm 3mm 1.6mm 0;
+      border-bottom: 1px solid var(--rule);
+    }
+    tbody tr { break-inside: avoid; }
+    td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+    td.em { font-weight: 700; }
+
+    .verdict {
+      display: block;
+      font-family: var(--sans);
+      font-size: 7.5pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.5mm;
+    }
+    .verdict::before {
+      content: "";
+      display: inline-block;
+      width: 2.2mm;
+      height: 2.2mm;
+      border-radius: 50%;
+      margin-right: 1.5mm;
+      vertical-align: 0;
+      background: currentColor;
+    }
+    .v-ok { color: var(--accent-green); }
+    .v-worse { color: var(--accent-red); }
+    .v-off { color: var(--accent-amber); }
+    .v-open { color: var(--ink-soft); }
+    .verdict-note { font-size: 8.5pt; color: var(--ink-soft); font-style: italic; }
+
+    /* ---------- Interstitial (helsida) ---------- */
+    .interstitial {
+      page: full;
+      height: 297mm;
+      background: var(--ink);
+      color: var(--bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 30mm 24mm;
+      position: relative;
+      overflow: hidden;
+    }
+    .interstitial-alt { background: #14141c; }
+    .interstitial::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 70% 30%, rgba(201, 138, 42, 0.12), transparent 55%),
+        radial-gradient(ellipse at 20% 80%, rgba(177, 68, 44, 0.10), transparent 60%);
+    }
+    .interstitial-inner { position: relative; z-index: 1; max-width: 150mm; }
+    .interstitial-eyebrow {
+      font-family: var(--sans);
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      font-size: 8pt;
+      font-weight: 500;
+      color: var(--accent-amber);
+      margin: 0 0 12mm 0;
+    }
+    .interstitial-stat {
+      font-family: var(--serif);
+      font-variation-settings: "opsz" 144, "SOFT" 30;
+      font-size: 118pt;
+      font-weight: 700;
+      line-height: 0.95;
+      color: var(--bg);
+      margin: 0;
+      letter-spacing: -0.045em;
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+    .interstitial-caption {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 15pt;
+      color: rgba(250, 248, 244, 0.7);
+      margin: 12mm auto 0;
+      max-width: 130mm;
+      line-height: 1.5;
+    }
+
+    /* ---------- Steg och kort ---------- */
+    .steps { list-style: none; margin: 0 0 6mm; padding: 0; counter-reset: st; }
+    .steps li {
+      counter-increment: st;
+      display: grid;
+      grid-template-columns: 10mm 1fr;
+      gap: 0 3mm;
+      padding: 2mm 0;
+      border-top: 1px solid var(--rule);
+      break-inside: avoid;
+    }
+    .steps li::before {
+      content: counter(st);
+      font-family: var(--serif);
+      font-variation-settings: "opsz" 144, "SOFT" 30;
+      font-weight: 700;
+      font-size: 17pt;
+      line-height: 1;
+      color: var(--accent-red);
+    }
+    .steps h3 { font-size: 11pt; margin: 0 0 0.25em; }
+    .steps p { margin: 0; }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4.5mm;
+      margin: 0 0 4.5mm;
+    }
+    .card-grid.three { grid-template-columns: 1fr 1fr 1fr; }
+    .card-grid.four { grid-template-columns: 1fr 1fr 1fr 1fr; gap: 3.5mm; }
+    .card-grid.four h3 { font-size: 10.5pt; }
+    .card {
+      background: var(--bg);
+      border: 1px solid var(--rule);
+      padding: 4mm 4.5mm 4mm;
+      break-inside: avoid;
+    }
+    .warm-panel .card { background: var(--bg); }
+    .card .tag {
+      font-family: var(--sans);
+      font-size: 6.8pt;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-weight: 600;
+      color: var(--accent-green);
+      display: block;
+      margin-bottom: 2mm;
+    }
+    .card h3 { font-size: 11.5pt; margin: 0 0 0.5em; }
+    .card p { font-size: 9pt; line-height: 1.46; margin: 0; }
+    .card p + p { margin-top: 0.6em; }
+    .card ul { margin: 0; padding-left: 4mm; font-size: 8.9pt; line-height: 1.44; }
+    .card li { margin-bottom: 1.2mm; }
+    .card li:last-child { margin-bottom: 0; }
+    .card.done { border-left: 4px solid var(--accent-green); }
+    .card.next { border-left: 4px solid var(--accent-amber); }
+    .card.next .tag { color: var(--accent-red); }
+    .card.alert { border-left: 4px solid var(--accent-red); }
+    .card.alert .tag { color: var(--accent-red); }
+    .card.headline {
+      grid-column: 1 / -1;
+      background: var(--ink);
+      color: var(--bg);
+      border: none;
+      border-left: 4px solid var(--accent-amber);
+    }
+    .card.headline h3 { color: var(--bg); }
+    .card.headline p, .card.headline li { color: rgba(250, 248, 244, 0.92); }
+    .card.headline strong { color: var(--accent-amber); }
+    .card.headline .tag { color: var(--accent-amber); }
+    .card.wide { grid-column: 1 / -1; }
+
+    .callout {
+      border-left: 4px solid var(--accent-amber);
+      background: var(--bg-warm);
+      padding: 4mm 4.5mm;
+      margin: 0 0 4mm;
+      break-inside: avoid;
+    }
+    .callout h3 { font-size: 11pt; margin: 0 0 0.4em; }
+    .callout p { margin: 0; font-size: 9.4pt; }
+    .callout.dark {
+      background: var(--ink);
+      color: var(--bg);
+    }
+    .callout.dark h3 { color: var(--accent-amber); }
+    .callout.dark p { color: rgba(250, 248, 244, 0.92); }
+
+    .bullets { list-style: none; margin: 0 0 5mm; padding: 0; }
+    .bullets li {
+      padding: 2.6mm 0 2.6mm 6mm;
+      border-top: 1px solid var(--rule);
+      position: relative;
+      break-inside: avoid;
+    }
+    .bullets li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 5.2mm;
+      width: 2.2mm;
+      height: 2.2mm;
+      background: var(--accent-amber);
+      border-radius: 50%;
+    }
+    .bullets li:last-child { border-bottom: 1px solid var(--rule); }
+
+    /* ---------- Mjölk-jämförelse ---------- */
+    .milk {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1.1fr;
+      align-items: stretch;
+      gap: 4.5mm;
+      margin: 0 0 3mm;
+    }
+    .milk-col {
+      border: 1px solid var(--rule);
+      padding: 4.5mm 5mm;
+      break-inside: avoid;
+    }
+    .milk-col .when {
+      font-family: var(--sans);
+      font-size: 7pt;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--ink-soft);
+    }
+    .milk-col .premium {
+      font-family: var(--serif);
+      font-variation-settings: "opsz" 144, "SOFT" 30;
+      font-weight: 700;
+      font-size: 28pt;
+      line-height: 1.05;
+      margin: 1mm 0 0.5mm;
+    }
+    .milk-col.now .premium { color: var(--accent-green); }
+    .milk-col .sub { font-size: 9pt; color: var(--ink-soft); margin: 0; }
+    .milk-col .sub strong { color: var(--ink); }
+    .milk-text { align-self: center; font-size: 9.5pt; margin: 0; }
+    .stack { display: flex; flex-direction: column; gap: 4mm; }
+    .stack .callout { margin: 0; }
+
+    /* ---------- Framåt (Akt 6) ---------- */
+    .horizon .card h3 { font-size: 11pt; }
+    .horizon .card ul { font-size: 8.6pt; line-height: 1.4; }
+    .horizon .card li { margin-bottom: 0.8mm; }
+    .horizon .card .tag { color: var(--accent-amber); }
+    .horizon .card.h1 { border-top: 4px solid var(--accent-amber); }
+    .horizon .card.h2 { border-top: 4px solid var(--accent-red); }
+    .horizon .card.h3 { border-top: 4px solid var(--ink-soft); }
+
+    /* ---------- Rekommendationer (Akt 7) ---------- */
+    .recommendations { page: warm; }
+    .recommendations .act-intro { border-top-color: #cdc6b5; }
+    .rec-num {
+      font-family: var(--serif);
+      font-variation-settings: "opsz" 144, "SOFT" 30;
+      font-weight: 700;
+      font-size: 15pt;
+      color: var(--accent-amber);
+      margin-right: 1.5mm;
+    }
+    .notes { display: grid; grid-template-columns: 1fr 1fr; gap: 4.5mm; margin: 0 0 4.5mm; }
+    .note {
+      border-top: 1.5px solid var(--ink);
+      padding-top: 2.5mm;
+      font-size: 9.3pt;
+      break-inside: avoid;
+    }
+    .note strong { display: block; font-family: var(--sans); font-size: 7.5pt; text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 1mm; }
+
+    /* ---------- Vad vi hade fel om ---------- */
+    .wrong { list-style: none; margin: 0 0 6mm; padding: 0; }
+    .wrong li {
+      padding: 2.6mm 0 2.6mm 7mm;
+      border-bottom: 1px solid var(--rule);
+      position: relative;
+      break-inside: avoid;
+    }
+    .wrong li:first-child { border-top: 1px solid var(--rule); }
+    .wrong li::before {
+      content: "−";
+      position: absolute;
+      left: 0;
+      top: 2.2mm;
+      font-family: var(--sans);
+      font-weight: 700;
+      color: var(--accent-red);
+      font-size: 11pt;
+    }
+
+    /* ---------- Källor ---------- */
+    .sources-blurb { font-size: 10pt; color: var(--ink-soft); max-width: 150mm; }
+    .sources-grid {
+      columns: 2;
+      column-gap: 9mm;
+    }
+    .sources-cat { break-inside: avoid; margin: 0 0 5mm; }
+    .sources-cat h3 {
+      font-size: 10pt;
+      margin: 0 0 1.5mm;
+      padding-bottom: 1.2mm;
+      border-bottom: 1px solid var(--rule);
+    }
+    .sources-cat ul { list-style: none; margin: 0; padding: 0; }
+    .sources-cat li {
+      font-family: var(--sans);
+      font-size: 7.3pt;
+      line-height: 1.4;
+      padding: 0.9mm 0;
+      color: var(--ink-soft);
+    }
+    .sources-cat a { color: var(--ink); }
+    .sources-cat a::after { content: " ↗"; color: var(--ink-soft); opacity: 0.6; }
+  </style>
+</head>
+<body>
+
+<!-- ============================================================
+     OMSLAG
+     ============================================================ -->
+<section class="hero">
+  <p class="kicker">En uppföljning till ledningsgruppen för Måltidsservice · oktober 2026</p>
+  <p class="hero-eyebrow">Uppföljning</p>
+  <h1 class="hero-title">När gödsel<br/>blir geopolitik</h1>
+  <div class="hero-lede">
+    <p>I maj hade sundet varit stängt i åttio dagar. Nu har det gått drygt tvåhundra.</p>
+    <p>Gasen är dyrare än vi räknade med, gödselpriset har gått tillbaka och kostnaderna byggs upp i leverantörsledet.</p>
+    <p>Kedjan håller, men den tar delvis en annan väg än vi trodde. Och höstens upphandling sker på en marknad som har förändrats.</p>
+  </div>
+  <div class="hero-foot">
+    <span>Läget per 3 oktober 2026</span>
+    <span>Uppföljning av <em>När gödsel blir geopolitik</em>, maj 2026</span>
+  </div>
+</section>
+
+<!-- ============================================================
+     KORT SAGT
+     ============================================================ -->
+<section class="summary">
+  <p class="kicker">Sammanfattning</p>
+  <h2>Kort sagt</h2>
+  <ol class="summary-list">
+    <li>
+      <div>
+        <h3>Krisen är djupare och mer utdragen än vi räknade med i maj.</h3>
+        <p>Sundet är i praktiken fortfarande stängt efter en kort öppning i juni–juli. Gaspriset (TTF) är upp omkring 130&nbsp;% sedan årsskiftet, och EU:s gaslager går in i vintern på drygt 70&nbsp;%.</p>
+      </div>
+    </li>
+    <li>
+      <div>
+        <h3>En länk i kedjan har försvagats: kvävegödseln.</h3>
+        <p>Världsmarknadspriset på urea är tillbaka på januarinivå, främst för att Kina återupptog exporten och för att bönderna slutade köpa. I Europa är kvävet däremot fortsatt dyrt att tillverka, och fosfor har aldrig gått ner.</p>
+      </div>
+    </li>
+    <li>
+      <div>
+        <h3>Kostnaderna stiger i leverantörsledet men har ännu inte nått våra avtalspriser.</h3>
+        <p>Producentpriserna i Sverige är upp 6,8&nbsp;% på ett år, och sex av tio livsmedelsföretag har fått högre produktionskostnader. Konjunkturinstitutet räknar med att energipriserna slår igenom i matpriserna under vintern och våren, alltså i det fönster vi pekade ut i maj.</p>
+      </div>
+    </li>
+    <li>
+      <div>
+        <h3>Eko-gapet krymper där vi trodde att det skulle krympa.</h3>
+        <p>Arlas eko-tillägg på mjölk har gått från +45&nbsp;% till +31&nbsp;% sedan januari. Drivkraften är energi och diesel snarare än gödsel.</p>
+      </div>
+    </li>
+    <li>
+      <div>
+        <h3>Upphandlingsmarknaden har förändrats.</h3>
+        <p>Konkurrensverket utreder de två största grossisterna för misstänkt samordning kring prisjusteringar och anbud, och branschöverenskommelsen är pausad. Det ger oss större möjlighet att själva sätta villkoren i höstens upphandling, men också en risk för få anbud.</p>
+      </div>
+    </li>
+  </ol>
+</section>
+
+<!-- ============================================================
+     AKT 1 · VAD SOM HÄNT
+     ============================================================ -->
+<section class="act" id="akt-1">
+  <header class="act-intro">
+    <p class="act-num">Akt 1</p>
+    <h2>Vad som hänt sedan maj</h2>
+    <p class="act-blurb">Från en kort öppning i juni till ett sund som återigen är stängt.</p>
+  </header>
+
+  <div class="legend">
+    <span class="l-conflict">Konflikten</span>
+    <span class="l-market">Energi och prognoser</span>
+    <span class="l-procure">Upphandlingsmarknaden</span>
+    <span class="l-other">Lättnad</span>
+  </div>
+
+  <ol class="timeline">
+    <li class="market"><span class="when">25 maj</span><span class="dot"></span><p class="what">TTF faller på rapporter om förhandlingar mellan USA och Iran. Dragningen hålls i dagarna efter.</p></li>
+    <li class="procure"><span class="when">Slutet av maj</span><span class="dot"></span><p class="what">Konkurrensverket genomför gryningsräder hos Menigo och Martin &amp; Servera, misstänkta för samordning i offentliga livsmedelsupphandlingar.</p></li>
+    <li><span class="when">14–17 juni</span><span class="dot"></span><p class="what">USA och Iran sluter en överenskommelse, Islamabad-memorandumet: 60 dagars fri passage genom sundet, och USA häver sin sjöblockad.</p></li>
+    <li><span class="when">Juni–juli</span><span class="dot"></span><p class="what">Kort lättnad. Lagrad gödsel och olja tar sig ut ur Persiska viken, och Kina börjar exportera urea igen.</p></li>
+    <li class="conflict"><span class="when">8 juli</span><span class="dot"></span><p class="what">Överenskommelsen kollapsar efter nya iranska angrepp mot handelsfartyg.</p></li>
+    <li class="conflict"><span class="when">14 juli</span><span class="dot"></span><p class="what">USA återinför sjöblockaden.</p></li>
+    <li class="market"><span class="when">Augusti</span><span class="dot"></span><p class="what">Värmebölja och torka i Europa, utdragna avbrott på norska gasfält. TTF över 65&nbsp;€/MWh den 20 augusti och över 70 den 31 augusti.</p></li>
+    <li class="procure"><span class="when">Sensommaren</span><span class="dot"></span><p class="what">Kost &amp; Näring pausar branschöverenskommelsen för livsmedelsupphandling i väntan på Konkurrensverkets utredning.</p></li>
+    <li class="conflict"><span class="when">September</span><span class="dot"></span><p class="what">TTF över 80&nbsp;€/MWh den 11 september. Den 27 september registreras en enda passage genom sundet, mot normalt 85 per dygn. Brent kring 103 dollar per fat.</p></li>
+    <li class="market"><span class="when">30 september</span><span class="dot"></span><p class="what">Konjunkturinstitutet: högre energipriser väntas slå igenom i matpriserna under vintern och våren.</p></li>
+  </ol>
+</section>
+
+<!-- ============================================================
+     AKT 2 · AVSTÄMNING
+     ============================================================ -->
+<section class="act" id="akt-2">
+  <header class="act-intro">
+    <p class="act-num">Akt 2</p>
+    <h2>Avstämning</h2>
+    <p class="act-blurb">Vad vi sa i maj, och vad som faktiskt hände.</p>
+  </header>
+
+  <table>
+    <thead>
+      <tr><th style="width:31%">Vad vi sa i maj</th><th style="width:45%">Läget i oktober</th><th style="width:24%">Bedömning</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Hormuz</strong> stängt sedan 4 mars. En snabb öppning löser inte problemet.</td>
+        <td>Stängt i drygt 200 dagar, med ett kort uppehåll i juni–juli. En passage den 27 september, mot normalt 85 per dygn.</td>
+        <td><span class="verdict v-ok">Stämmer</span><span class="verdict-note">och krisen varar längre än vi räknade med</span></td>
+      </tr>
+      <tr>
+        <td><strong>Gaslagren</strong> missar det lättade 80&nbsp;%-målet med 10–13 procentenheter.</td>
+        <td>71,5&nbsp;% den 2 oktober, mot ett femårssnitt på 92&nbsp;% för samma datum. Tyskland och Nederländerna kring 57&nbsp;%.</td>
+        <td><span class="verdict v-ok">Stämmer</span></td>
+      </tr>
+      <tr>
+        <td><strong>TTF-gas</strong> 46,6&nbsp;€/MWh, upp 25&nbsp;% på ett år.</td>
+        <td>Över 80&nbsp;€/MWh i september, omkring +130&nbsp;% sedan årsskiftet.</td>
+        <td><span class="verdict v-worse">Värre än vi trodde</span></td>
+      </tr>
+      <tr>
+        <td><strong>Qatars LNG:</strong> IEA räknar med ~120&nbsp;Gm³ förlorad kapacitet 2026–2030.</td>
+        <td>IEA har höjt till 140&nbsp;Gm³, och det under antagandet att sundet öppnar under tredje kvartalet, vilket inte har skett. 17&nbsp;% av Qatars exportkapacitet är utslagen, och reparationerna kan ta upp till fem år.</td>
+        <td><span class="verdict v-ok">Stämmer</span><span class="verdict-note">och värre</span></td>
+      </tr>
+      <tr>
+        <td><strong>Gödsel:</strong> Världsbanken räknar med +31&nbsp;% för 2026, urea +60&nbsp;%.</td>
+        <td>Urea toppade på 935–960&nbsp;$/t i april och ligger nu kring 400&nbsp;$/t, ungefär januarinivå. Världsbankens gödselindex låg i juli under nivån ett år tidigare. Fosfat är fortsatt dyrt.</td>
+        <td><span class="verdict v-off">Avviker</span></td>
+      </tr>
+      <tr>
+        <td><strong>Matpriser:</strong> 6–12 månaders eftersläpning, de största påslagen hösten 2026 till våren 2027.</td>
+        <td>Producentpriserna totalt +6,8&nbsp;% på ett år, och sex av tio livsmedelsföretag har fått högre kostnader. Priserna längre fram i kedjan har ännu inte rört sig. KI väntar genomslag under vintern och våren.</td>
+        <td><span class="verdict v-open">Inte avgjort</span><span class="verdict-note">fönstret öppnar nu</span></td>
+      </tr>
+      <tr>
+        <td><strong>Eko mot konventionellt:</strong> gapet krymper på mejeri, spannmål och frilandsgrönt.</td>
+        <td>Arlas eko-tillägg på mjölk har krympt från +45&nbsp;% till +31&nbsp;% sedan januari.</td>
+        <td><span class="verdict v-ok">Stämmer</span><span class="verdict-note">så här långt</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p class="section-title" style="margin-top:6mm">Vad vi hade fel om</p>
+  <ul class="wrong">
+    <li><strong>Vi överskattade hur mycket världspriset på kvävegödsel följer europeisk gas.</strong> Det sätts av den billigaste exportören, och Kina kan ändra bilden snabbt.</li>
+    <li><strong>Vi underskattade energisidan.</strong> Gaspriset har stigit betydligt mer än vi räknade med.</li>
+    <li><strong>Vi underskattade hur seg krisen kan bli.</strong> En öppning kom, men den höll i tre veckor.</li>
+    <li><strong>Vi pratade om priser men inte om upphandlingsmarknaden.</strong> Utredningen av grossisterna och den pausade branschöverenskommelsen påverkar höstens upphandling minst lika mycket som gaspriset.</li>
+  </ul>
+</section>
+
+<section class="interstitial" id="inter-1">
+  <div class="interstitial-inner">
+    <p class="interstitial-eyebrow">sedan årsskiftet</p>
+    <p class="interstitial-stat">+130&#8239;%</p>
+    <p class="interstitial-caption">TTF-gaspriset, Europas referenspris på naturgas. I maj räknade vi med +25&nbsp;% på ett år.</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     AKT 3 · AVVIKELSEN: KVÄVET
+     ============================================================ -->
+<section class="act" id="akt-3">
+  <header class="act-intro">
+    <p class="act-num">Akt 3</p>
+    <h2>Avvikelsen: kvävet</h2>
+    <p class="act-blurb">Gaspriset steg, men gödselpriset föll. Varför?</p>
+  </header>
+
+  <p class="lede">Ureapriset steg som vi förutsåg, men bara fram till april. Sedan dess har det fallit med omkring 60&nbsp;%, utan att sundet har öppnat. Fem saker förklarar det.</p>
+
+  <ol class="steps">
+    <li><div><h3>Bönderna slutade köpa.</h3><p>Priset passerade vad jordbruket hade råd med. Sju av tio amerikanska lantbrukare kunde inte köpa all gödsel de behövde, och köpare i Brasilien, Indien och Europa höll sig borta. Efterfrågan föll, och priset föll med den.</p></div></li>
+    <li><div><h3>Kina kom tillbaka.</h3><p>Kinesisk ureaexport gick från 7&nbsp;000 ton i juni till 403&nbsp;000 ton i juli, och 1,2 miljoner ton är nu kontrakterade till Indien. Kina styr både volym, via exportkvoter, och pris, via golvpriser kring 430–440&nbsp;$/t. Dagens världsmarknadspris är alltså delvis ett kinesiskt politiskt beslut.</p></div></li>
+    <li><div><h3>Gödseln hittade andra vägar.</h3><p>Oman skeppar från Sohar utanför sundet, en del gick via Röda havet, och den korta öppningen i juni släppte ut lagrad gödsel. Den globala exporten av kväve- och fosfatgödsel har bara minskat med omkring 9&nbsp;%.</p></div></li>
+    <li><div><h3>Säsongen tog slut.</h3><p>Vårgödslingen på norra halvklotet var avslutad i juni. Toppen i april var delvis säsong.</p></div></li>
+    <li><div><h3>Världspriset sätts inte av europeisk gas.</h3><p>I maj beskrev vi kedjan gas → ammoniak → kvävegödsel som om världspriset följer gaspriset. I praktiken sätts det av den billigaste exportören som kan leverera, och just nu är det Kina, där kvävet främst tillverkas av kol.</p></div></li>
+  </ol>
+
+  <div class="card-grid" style="align-items:start">
+    <div class="card alert">
+      <span class="tag">Undantaget</span>
+      <h3>I Europa är kvävet fortfarande dyrt</h3>
+      <p>Med TTF kring 78&nbsp;€/MWh kostar det europeiska fabriker omkring 650&nbsp;$/t att tillverka urea, mot ett världsmarknadspris kring 400. LAT Nitrogen har stoppat produktionen i Grandpuits i Frankrike, och Yara höjde priserna i Norden igen i september. Svenska bönder möter alltså ett fastare pris än världsmarknaden.</p>
+    </div>
+    <div class="stack">
+      <div class="card alert">
+        <span class="tag">Undantaget</span>
+        <h3>Fosfor har aldrig gått ner</h3>
+        <p>Fosfatpriserna ligger kvar på höga nivåer, eftersom svavel, som också till stor del kom från Persiska viken, är en flaskhals i tillverkningen.</p>
+      </div>
+      <div class="callout dark">
+        <h3>Vad det betyder</h3>
+        <p>Kvävelänken i vår kedja är svagare just nu, men den vilar på Kinas exportpolitik och på nästa säsongs efterfrågan. Om sundet förblir stängt, gaslagren är låga och Kina stramar åt kan kvävepriset stiga igen inför vårens gödsling 2027. Och den gödsling som bönderna avstod från i år syns i nästa skörd.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     AKT 4 · KOSTNADSTRYCKET
+     ============================================================ -->
+<section class="act" id="akt-4">
+  <header class="act-intro">
+    <p class="act-num">Akt 4</p>
+    <h2>Kostnadstrycket i leverantörsledet</h2>
+    <p class="act-blurb">Det syns inte i våra priser ännu, men det byggs upp bakåt i kedjan.</p>
+  </header>
+
+  <ul class="bullets">
+    <li><strong>Producentpriserna i Sverige är upp 6,8&nbsp;% på ett år</strong> (augusti, samtliga varor), och priserna steg även inom livsmedel under månaden. Sex av tio livsmedelsföretag har fått högre produktionskostnader under första halvåret.</li>
+    <li><strong>Producenterna har inte fått föra vidare kostnaderna.</strong> Enligt Livsmedelsföretagen har dagligvaruhandeln stoppat prishöjningar under våren och sommaren. Kostnaderna har alltså stannat hos producenterna.</li>
+    <li><strong>Trycket kommer att släppa någonstans.</strong> Höstens förhandlingar i livsmedelskedjan beskrivs i branschpressen som nästa prövning. Konjunkturinstitutet räknar med att matpriserna stiger omkring 5&nbsp;% från septembernivån till slutet av 2027, med energin som drivkraft under vintern och våren.</li>
+    <li><strong>Vår bedömning:</strong> Producenter som inte fått igenom höjningar mot dagligvaruhandeln kommer att försöka ta igen marginalen i andra kanaler, däribland storhushåll och offentliga avtal. Höstens anbud kommer sannolikt att prissätta in både de kostnader som redan finns och en riskpremie för vintern.</li>
+  </ul>
+
+  <div class="callout">
+    <h3>Ett varningsord om KPI</h3>
+    <p>KPI livsmedel visar −6,6&nbsp;% på ett år, men det beror nästan helt på den sänkta matmomsen. Den påverkar inte vår budget, eftersom vi får momsen kompenserad, och säger därför lite om vår kostnadsutveckling. Men den påverkar oss på ett annat sätt: avtal som indexeras mot KPI livsmedel får en sänkning på omkring 5,4&nbsp;% från april 2026, och en höjning på omkring 5,7&nbsp;% när momsen återgår vid årsskiftet 2027/2028, utan att leverantörens kostnader har ändrats. Det är viktigt för vilket index vi väljer i höstens upphandling.</p>
+  </div>
+</section>
+
+<section class="interstitial interstitial-alt" id="inter-2">
+  <div class="interstitial-inner">
+    <p class="interstitial-eyebrow">första halvåret 2026</p>
+    <p class="interstitial-stat">6 av 10</p>
+    <p class="interstitial-caption">livsmedelsföretag har fått högre produktionskostnader i år. Kostnaderna finns redan i kedjan, de har bara inte nått våra avtal ännu.</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     AKT 5 · EKO MOT KONVENTIONELLT
+     ============================================================ -->
+<section class="act" id="akt-5">
+  <header class="act-intro">
+    <p class="act-num">Akt 5</p>
+    <h2>Eko mot konventionellt</h2>
+    <p class="act-blurb">Gapet krymper, men delvis av andra skäl än vi trodde.</p>
+  </header>
+
+  <p class="section-title" style="margin-top:0">Mjölken är det tydligaste exemplet · Arlas avräkningspris till bönderna</p>
+  <div class="milk">
+    <div class="milk-col">
+      <span class="when">Januari 2026 · eko-tillägg</span>
+      <p class="premium">+45&nbsp;%</p>
+      <p class="sub">Konventionell <strong>455 öre/kg</strong> · Ekologisk <strong>658 öre/kg</strong></p>
+    </div>
+    <div class="milk-col now">
+      <span class="when">Oktober 2026 · eko-tillägg</span>
+      <p class="premium">+31&nbsp;%</p>
+      <p class="sub">Konventionell <strong>509 öre/kg</strong> · Ekologisk <strong>667 öre/kg</strong></p>
+    </div>
+    <p class="milk-text">Konventionell mjölk har blivit 12&nbsp;% dyrare i år, ekologisk 1&nbsp;%. Eko-tillägget på mejeri har krympt med en tredjedel på nio månader.</p>
+  </div>
+
+  <p class="section-title">De tre kanalerna, uppdaterade</p>
+  <table>
+    <thead><tr><th style="width:34%">Kanal</th><th style="width:16%">I maj</th><th>Nu</th></tr></thead>
+    <tbody>
+      <tr><td class="em">Insatsvaror: gas → gödsel</td><td>Huvudkanalen</td><td><span class="verdict v-off">Svagare</span>Världspriset på urea är tillbaka på januarinivå, men europeiskt kväve och fosfat är fortsatt dyrt.</td></tr>
+      <tr><td class="em">Bränsle: olja → diesel</td><td>Viktig</td><td><span class="verdict v-worse">Starkare</span>Brent kring 103&nbsp;$/fat.</td></tr>
+      <tr><td class="em">Förädling: gas och el → torkning, mejeri, kyla</td><td>Viktig</td><td><span class="verdict v-worse">Starkare</span>TTF +130&nbsp;% sedan årsskiftet.</td></tr>
+    </tbody>
+  </table>
+  <p>Konventionellt jordbruk har mer energi bunden i hela sin kedja, så det drabbas hårdare även när gödseln går tillbaka. Hittills är det energin som gör det jobb vi trodde att gödseln skulle göra.</p>
+
+  <p class="section-title">Kategorierna, uppdaterade</p>
+  <table>
+    <thead><tr><th style="width:26%">Kategori</th><th style="width:24%">Vad vi sa i maj</th><th>Läget nu</th></tr></thead>
+    <tbody>
+      <tr><td class="em">Mejeri, kött</td><td>Gapet krymper</td><td>Bekräftat för mjölk. Kött följer efter med 9–18 månaders eftersläpning via foder och djurens cykel.</td></tr>
+      <tr><td class="em">Spannmål, baljväxter</td><td>Gapet krymper</td><td>Inte avgjort. Avgörs av kvävepriset inför våren och av skörden 2027.</td></tr>
+      <tr><td class="em">Frilandsgrönt, rotfrukter</td><td>Gapet kan nästan stänga</td><td>Inte avgjort. Följ kommande säsongspriser.</td></tr>
+      <tr><td class="em">Växthusgrönt</td><td>Gapet kan vidgas</td><td>Mer sannolikt än i maj, eftersom uppvärmningen blir dyrare med högre gaspris.</td></tr>
+      <tr><td class="em">Importerad eko-frukt</td><td>Gapet kan vidgas</td><td>Mer sannolikt än i maj, eftersom diesel och frakt är dyrare.</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout">
+    <h3>Det som kan bryta bilden</h3>
+    <p>Eko-utbudet är begränsat. Om fler offentliga köpare ställer högre eko-krav när gapet krymper stiger även eko-priserna, och vissa kategorier kan få svårt att leverera de volymer som efterfrågas.</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     AKT 6 · FRAMÅT
+     ============================================================ -->
+<section class="act horizon" id="akt-6">
+  <header class="act-intro">
+    <p class="act-num">Akt 6</p>
+    <h2>Vad som ligger framför oss</h2>
+    <p class="act-blurb">Vår bedömning inför vintern och våren.</p>
+  </header>
+
+  <p class="section-title" style="margin-top:0">Huvudscenario: sundet förblir i stort sett stängt över vintern</p>
+  <div class="card-grid three">
+    <div class="card h1">
+      <span class="tag">Oktober–december</span>
+      <h3>Hösten 2026</h3>
+      <ul>
+        <li>Avtalsförhandlingar i hela livsmedelskedjan. Leverantörer som har burit kostnadsökningar i ett halvår vill föra dem vidare.</li>
+        <li>Europa går in i vintern med låga gaslager. En kall vinter kan pressa upp TTF ytterligare.</li>
+        <li>Europeisk kväveproduktion fortsatt under press, med risk för fler neddragningar.</li>
+      </ul>
+    </div>
+    <div class="card h2">
+      <span class="tag">Januari–juni</span>
+      <h3>Vintern och våren 2027</h3>
+      <ul>
+        <li>Energikostnaderna slår igenom i matpriserna. Vi räknar med att de största påslagen landar här, i linje med fönstret vi pekade ut i maj, och alltså inom löptiden för de avtal vi tecknar i höst.</li>
+        <li>Kvävepriset inför vårgödslingen avgör hur mycket av gödselkedjan som kommer tillbaka.</li>
+        <li>Gasmarknaden förblir stram under hela 2027 (IEA).</li>
+      </ul>
+    </div>
+    <div class="card h3">
+      <span class="tag">2027–2028</span>
+      <h3>Längre fram</h3>
+      <ul>
+        <li>Skörden 2027 påverkas av att bönderna gödslade mindre 2026.</li>
+        <li>Priserna går ner långsammare än de gick upp, precis som efter 2022.</li>
+        <li>Matmomsen återgår vid årsskiftet 2027/2028. Det påverkar inte vår budget, men det ger ett hopp i KPI livsmedel som slår igenom i alla avtal som indexeras mot det.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="callout">
+    <h3>Om sundet öppnar</h3>
+    <p>Oljepris och fraktkostnader går ner relativt snabbt, och gaspriset lättar. Men Qatars skadade anläggningar och Europas tömda gaslager gör att gasmarknaden förblir stram under 2027. Kostnadstrycket som redan har byggts upp i kedjan försvinner inte. Det kommer fortfarande ut i höstens och vinterns prissättning, bara i mindre omfattning.</p>
+  </div>
+
+  <p class="section-title">Det vi följer</p>
+  <table>
+    <thead><tr><th style="width:36%">Signal</th><th style="width:26%">Källa</th><th>Varför</th></tr></thead>
+    <tbody>
+      <tr><td class="em">Passager genom Hormuz</td><td>IMF PortWatch</td><td>Utbudet av LNG, olja och gödsel</td></tr>
+      <tr><td class="em">EU:s gaslager och TTF</td><td>AGSI+, ICE</td><td>Europas energipris i vinter</td></tr>
+      <tr><td class="em">Kvävepriset i Norden och Kinas exportkvot</td><td>Yara, BM Agri, branschpress</td><td>Om gödsellänken kommer tillbaka</td></tr>
+      <tr><td class="em">Producentpriser för livsmedel</td><td>SCB, månadsvis</td><td>När kostnadstrycket når leverantörernas prislistor</td></tr>
+      <tr><td class="em">Arlas avräkningspris, konventionellt mot eko</td><td>Arla, månadsvis</td><td>Om eko-gapet fortsätter att krympa</td></tr>
+      <tr><td class="em">Konkurrensverkets utredning av grossisterna</td><td>KKV, branschpress</td><td>Villkoren på upphandlingsmarknaden</td></tr>
+      <tr><td class="em">Våra egna inköpspriser</td><td>Egna fakturor och prisjusteringar</td><td>Det enda som räknas i vår budget</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="interstitial" id="inter-3">
+  <div class="interstitial-inner">
+    <p class="interstitial-eyebrow">Hormuzsundet, 27 september 2026</p>
+    <p class="interstitial-stat">1 av 85</p>
+    <p class="interstitial-caption">fartyg passerade sundet, jämfört med ett normalt dygn före krisen.</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     AKT 7 · HÖSTENS UPPHANDLING
+     ============================================================ -->
+<section class="act recommendations" id="akt-7">
+  <header class="act-intro">
+    <p class="act-num">Akt 7</p>
+    <h2>Höstens upphandling</h2>
+    <p class="act-blurb">Slutsatsen från maj står sig: avtalen vi tecknar nu löper rakt genom prisfönstret. Men marknaden vi går ut på har förändrats.</p>
+  </header>
+
+  <p class="section-title" style="margin-top:0">Det som håller</p>
+  <div class="card-grid four">
+    <div class="card done">
+      <span class="tag">redan på plats</span>
+      <h3>Hög andel eko</h3>
+      <p>Vi sitter tungt i de kategorier där gapet nu krymper, och mejeri visar det redan.</p>
+    </div>
+    <div class="card done">
+      <span class="tag">redan på plats</span>
+      <h3>Lågt svinn</h3>
+      <p>Varje procentenhet mindre svinn är fortfarande en procentenhet billigare råvara.</p>
+    </div>
+    <div class="card done">
+      <span class="tag">redan på plats</span>
+      <h3>Lokalt först</h3>
+      <p>Med dyrare diesel och frakt är det värt mer nu än i maj, och delområden i upphandlingen gör det lättare att få lokala anbud.</p>
+    </div>
+    <div class="card done">
+      <span class="tag">redan på plats</span>
+      <h3>Flexibla menyer</h3>
+      <p>Den viktigaste spaken när priserna börjar röra sig i vinter, förutsatt att avtalet tillåter den.</p>
+    </div>
+  </div>
+
+  <p class="section-title">Marknaden vi går ut på</p>
+  <ul class="bullets">
+    <li><strong>Leverantörer med stigande kostnader.</strong> De kommer att vilja prissätta in både dagens kostnader och osäkerheten om vintern. Ju mer risk vi lägger på dem, desto högre riskpremie i anbuden.</li>
+    <li><strong>Få grossister och en pågående utredning.</strong> Konkurrensverket misstänker att Menigo och Martin &amp; Servera har samordnat villkor för prisjustering och avstått från att lämna anbud, eller lämnat nollbud, när kommuner inte följt branschöverenskommelsen. Tolv av tretton kommuner i Jönköpings län har vittnat om påtryckningar.</li>
+    <li><strong>Branschöverenskommelsen är pausad.</strong> Den tidigare branschpraxisen med prisjustering fyra gånger om året, baserad på leverantörernas egna kostnadsuppgifter, gäller inte längre som norm. Vi har därmed ett tydligare mandat att själva utforma prisjusteringen, men vi ska räkna med att det kan påverka hur många anbud vi får.</li>
+  </ul>
+
+  <p class="section-title">Råd inför upphandlingen</p>
+  <div class="card-grid">
+    <div class="card headline">
+      <span class="tag">det viktigaste</span>
+      <h3><span class="rec-num">1</span> Utforma en egen prisjusteringsmodell och välj index med omsorg</h3>
+      <ul>
+        <li>Koppla prisjusteringen till ett objektivt, publicerat index i stället för leverantörernas egna kostnadsuppgifter. Det gör justeringarna möjliga att kontrollera.</li>
+        <li>Undvik KPI livsmedel, som innehåller moms och därför ger ett hopp på omkring 5,7&nbsp;% vid årsskiftet 2027/2028 utan att kostnaderna ändrats. Ett index utan moms, till exempel SCB:s producentprisindex för livsmedel, eller en neutraliserad momseffekt, ger en rättvisare bild.</li>
+        <li>Gör modellen <strong>symmetrisk</strong>, så att priserna även sänks när indexet går ner. Erfarenheten från 2022 är att priser stiger snabbt och sjunker långsamt.</li>
+        <li>Bestäm fasta justeringstillfällen, tak och golv per justering och en karenstid innan första justering.</li>
+        <li>Formulera klausulen så att den är klar, exakt och entydig enligt 17 kap. LOU. Då kan den tillämpas under avtalstiden utan att avtalet behöver göras om.</li>
+      </ul>
+    </div>
+    <div class="card next">
+      <h3><span class="rec-num">2</span> Bredda konkurrensen</h3>
+      <ul>
+        <li>Dela upp upphandlingen i delområden, till exempel mejeri, bröd, kött, frukt och grönt, så att producenter och regionala leverantörer kan lämna anbud direkt och vi blir mindre beroende av två grossister. Det stärker också vårt arbete med lokalt först.</li>
+        <li>För en marknadsdialog innan annonsering, så att vi vet vilka villkor som ger anbud och vilka som inte gör det.</li>
+        <li>Dokumentera eventuella påtryckningar eller samordnade nollbud och ta kontakt med Konkurrensverket om det inträffar.</li>
+      </ul>
+    </div>
+    <div class="card next">
+      <h3><span class="rec-num">3</span> Styr eko-kraven per kategori</h3>
+      <ul>
+        <li>Ställ höga eko-krav där gapet krymper: mejeri först, där det redan syns, därefter spannmål, baljväxter, frilandsgrönt och rotfrukter.</li>
+        <li>Var mer flexibla med växthusgrönt och importerad eko-frukt, där gapet kan vidgas. Där kan säsongsanpassning eller tilldelningskriterier fungera bättre än absoluta krav.</li>
+        <li>Upphandlingsmyndighetens hållbarhetskriterier för livsmedel ger färdiga formuleringar.</li>
+      </ul>
+    </div>
+    <div class="card next">
+      <h3><span class="rec-num">4</span> Bygg in flexibiliteten i avtalet</h3>
+      <ul>
+        <li>Flexibla menyer är vår starkaste spak, men bara om avtalet tillåter den. Använd uppskattade volymer i stället för bindande, och skriv in möjligheten att byta produkter, flytta volym mellan kategorier och säsongsanpassa sortimentet.</li>
+      </ul>
+    </div>
+    <div class="card next">
+      <h3><span class="rec-num">5</span> Väg avtalstid och fasta priser mot varandra</h3>
+      <ul>
+        <li>Långa perioder med fasta priser i ett osäkert läge betalar vi för genom riskpremier. En kortare fastprisperiod följd av indexjustering är sannolikt billigare totalt.</li>
+        <li>Använd förlängningsoptioner, så att vi kan välja att gå ut på nytt när marknaden har stabiliserats i stället för att vara bundna genom 2028.</li>
+      </ul>
+    </div>
+    <div class="card next">
+      <h3><span class="rec-num">6</span> Säkra leveranserna</h3>
+      <ul>
+        <li>Ställ krav på leverantörernas ekonomiska stabilitet och följ upp den under avtalstiden. Producenter som har tagit kostnader i ett halvår är mer sårbara än vanligt.</li>
+        <li>Ställ krav på leveranssäkerhet, ersättningsprodukter och prioritering vid störningar. Det är en del av vår livsmedelsberedskap.</li>
+      </ul>
+    </div>
+    <div class="card next">
+      <h3><span class="rec-num">7</span> Budgetera för stigande avtalspriser under 2027</h3>
+      <ul>
+        <li>Använd Konjunkturinstitutets cirka +5&nbsp;% fram till slutet av 2027 som riktmärke, och ta fram ett högre scenario för att sundet förblir stängt hela vintern.</li>
+        <li>Följ producentpriserna och våra egna prisjusteringar, inte KPI.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="notes">
+    <div class="note"><strong>Om underlaget redan är annonserat</strong>Ändringar som kan påverka vilka som lämnar anbud kräver rättelse och förlängd anbudstid, eller att upphandlingen görs om. Mindre förtydliganden kan göras via frågor och svar. Prioritera i så fall prisjusteringsklausulen och valet av index.</div>
+    <div class="note"><strong>Om befintliga avtal indexeras mot KPI livsmedel</strong>Kontrollera att momssänkningen från april har slagit igenom som en sänkning i våra priser.</div>
+  </div>
+
+</section>
+
+<!-- ============================================================
+     KÄLLOR
+     ============================================================ -->
+<section class="act" id="kallor">
+  <header class="act-intro">
+    <p class="act-num">Underlag</p>
+    <h2>Källor</h2>
+  </header>
+  <p class="sources-blurb">Underlaget är hämtat 3 oktober 2026. Vissa siffror kommer från sammanställningar i andrahandskällor och bör stämmas av mot primärkällan innan de används externt.</p>
+
+  <div class="sources-grid">
+    <div class="sources-cat">
+      <h3>Hormuz och konflikten</h3>
+      <ul>
+        <li><a href="https://straits.live/briefs/2026-09-30">Strait of Hormuz Status, 30 september 2026</a> (straits.live)</li>
+        <li><a href="https://www.axios.com/2026/06/14/us-iran-ceasefire-extended-hormuz-reopen-trump">US, Iran reach deal to extend ceasefire, open strait</a> (Axios, 14 juni 2026)</li>
+        <li><a href="https://www.npr.org/2026/06/18/nx-s1-5863517/trump-iran-deal-blockade-strait-hormuz">U.S. lifts blockade on Iranian ports as 60-day clock starts ticking</a> (NPR, 18 juni 2026)</li>
+        <li><a href="https://en.wikipedia.org/wiki/2026_United_States_naval_blockade_of_Iran">2026 United States naval blockade of Iran</a> (Wikipedia)</li>
+        <li><a href="https://en.wikipedia.org/wiki/2026_Iran_war_ceasefire">2026 Iran war ceasefire</a> (Wikipedia)</li>
+      </ul>
+    </div>
+    <div class="sources-cat">
+      <h3>Gas och LNG</h3>
+      <ul>
+        <li><a href="https://energyriskiq.com/gas-storage-levels-in-europe">Europe Gas Storage Levels Today</a> (EnergyRiskIQ)</li>
+        <li><a href="https://www.spglobal.com/energy/en/news-research/latest-news/electric-power/081726-eu-gas-storage-passes-60-full-but-still-lags-recent-years-gie">EU gas storage passes 60% full but still lags recent years</a> (S&amp;P Global)</li>
+        <li><a href="https://www.euronews.com/business/2026/08/20/europes-gas-prices-have-doubled-with-the-worst-yet-to-come">European gas prices hit highest point since March, worse may follow</a> (Euronews, 20 augusti 2026)</li>
+        <li><a href="https://www.euronews.com/business/2026/08/31/european-gas-prices-spike-above-70-amid-renewed-middle-east-fighting">European gas prices spike above €70 amid renewed Middle East fighting</a> (Euronews, 31 augusti 2026)</li>
+        <li><a href="https://www.protergia.gr/en/home/natural-gas/ttf-prices-per-month/">TTF Prices per month</a> (Protergia)</li>
+        <li><a href="https://www.iea.org/reports/gas-market-report-q3-2026/executive-summary">Gas Market Report Q3 2026, Executive summary</a> (IEA)</li>
+        <li><a href="https://globallnghub.com/qatar-lng-capacity-hit-as-ras-laffan-attacks-damage-key-trains.html">Qatar LNG capacity hit as Ras Laffan attacks damage key trains</a> (Global LNG Hub)</li>
+      </ul>
+    </div>
+    <div class="sources-cat">
+      <h3>Gödsel</h3>
+      <ul>
+        <li><a href="https://www.ifpri.org/blog/how-are-fertilizer-markets-coping-with-the-continued-closure-of-the-strait-of-hormuz/">How are fertilizer markets coping with the continued closure of the Strait of Hormuz?</a> (IFPRI)</li>
+        <li><a href="https://www.global-agriculture.com/crop-nutrition/global-urea-prices-ease-as-chinas-export-surge-eases-supply-fears/">Global Urea Prices Ease as China's Export Surge Eases Supply Fears</a> (Global Agriculture)</li>
+        <li><a href="https://www.fertilizerdaily.com/20260907-china-urea-india-tender-1-2-million-tonnes-2026/">China to ship 1.2 million tonnes of urea to India as prices plunge 58%</a> (Fertilizer Daily, 7 september 2026)</li>
+        <li><a href="https://www.fertilizerdaily.com/20260918-china-urea-export-quota-2026-nitrogen-price-floor/">China's urea quota and FOB price floors reshape global nitrogen trade for Q4</a> (Fertilizer Daily, 18 september 2026)</li>
+        <li><a href="https://www.chemanalyst.com/NewsAndDeals/NewsDetails/china-urea-exports-roar-back-as-new-capacity-boosts-44521">China Urea Exports Roar Back</a> (ChemAnalyst)</li>
+        <li><a href="https://www.afriqom.com/insights/india-urea-prices-hit-record-highs-amid-tight-supply">India IPL urea tender sets record at $935/t WCI and $959/t ECI</a> (Afriqom)</li>
+        <li><a href="https://www.sunsirs.com/commodity-news/petail-36560.html">Review of the Global Urea Market, Q1–Q3 2026, and Outlook for Q4</a> (SunSirs)</li>
+        <li><a href="https://www.fertilizerdaily.com/20260622-seven-in-ten-u-s-farmers-could-not-afford-all-the-fertilizer-they-needed-for-the-2026-crop/">Seven in ten U.S. farmers could not afford all the fertilizer they needed</a> (Fertilizer Daily)</li>
+        <li><a href="https://ycharts.com/indicators/fertilizers_index_world_bank">Fertilizers Price Index, World Bank</a> (YCharts)</li>
+        <li><a href="https://wikifarmer.com/library/en/article/eu-fertiliser-action-plan-2026">EU fertiliser action plan 2026</a> (Wikifarmer)</li>
+        <li><a href="https://lantbruksnytt.se/yara-hojer-godselpriset-igen/">Yara höjer gödselpriset igen</a> (Lantbruksnytt)</li>
+      </ul>
+    </div>
+    <div class="sources-cat">
+      <h3>Kostnadsläget i livsmedelskedjan</h3>
+      <ul>
+        <li><a href="https://www.scb.se/hitta-statistik/statistik-efter-amne/priser-och-ekonomiska-tendenser/priser/prisindex-i-producent-och-importled-ppi/pong/statistiknyhet/prisindex-i-producent--och-importled-augusti-2026">Prisindex i producent- och importled, augusti 2026</a> (SCB)</li>
+        <li><a href="https://www.scb.se/pressmeddelande/matpriserna-i-augusti/">Matpriserna sjönk i augusti</a> (SCB)</li>
+        <li><a href="https://livsmedelsnyheter.se/2026/08/27/matpriserna-sjunker-mer-an-momssankningen-handeln-starker-sin-forhandlingsmakt/">Matpriserna sjunker mer än momssänkningen</a> (Livsmedelsnyheter, 27 augusti 2026)</li>
+        <li><a href="https://www.butikstrender.se/matpriserna-fortsatter-ned-hostens-forhandlingar-kan-bli-nasta-provning/">Matpriserna fortsätter ned, höstens förhandlingar kan bli nästa prövning</a> (Butikstrender)</li>
+        <li><a href="https://www.oskarshamns-nytt.se/ny-prognos-sa-mycket-dyrare-kan-maten-bli-framover/">Ny prognos: så mycket dyrare kan maten bli framöver</a> (Oskarshamns-Nytt, om KI:s prognos)</li>
+      </ul>
+    </div>
+    <div class="sources-cat">
+      <h3>Eko mot konventionellt</h3>
+      <ul>
+        <li><a href="https://www.ja.se/artikel/2240738/mjlkpriset-lyfter-i-oktober.html">Mjölkpriset lyfter i oktober</a> (Jordbruksaktuellt)</li>
+        <li><a href="https://via.tt.se/pressmeddelande/4569129/mjolkpriset-till-bonderna-hojs-i-oktober?lang=sv">Mjölkpriset till bönderna höjs i oktober</a> (TT)</li>
+        <li><a href="https://via.tt.se/pressmeddelande/4199625/mjolkpriset-till-bonderna-sanks-i-januari?publisherId=3235978&amp;lang=sv">Mjölkpriset till bönderna sänks i januari</a> (TT)</li>
+        <li><a href="https://www.ekolantbruk.se/nyheter/hogre-matpriser-ger-mindre-skillnad-mellan-eko-och-konventionellt">Högre matpriser ger mindre skillnad mellan eko och konventionellt</a> (Ekolantbruk)</li>
+      </ul>
+    </div>
+    <div class="sources-cat">
+      <h3>Upphandlingsmarknaden</h3>
+      <ul>
+        <li><a href="https://upphandling24.se/grossister-misstanks-for-kartell/">Grossister misstänks för kartell</a> (Upphandling24)</li>
+        <li><a href="https://www.dagligvarunytt.se/marknadsnytt/lagar-regler/gryningsrad-mot-axel-johnsons-grossist-misstanker-kartellbeteende/">Martin &amp; Servera och Menigo utreds av Konkurrensverket</a> (Dagligvarunytt)</li>
+        <li><a href="https://www.vetlandaposten.se/vetlanda/kommunen-utsattes-for-patryckningar-misstankt-kartellbildning">Kommunen utsattes för påtryckningar</a> (Vetlanda-Posten)</li>
+        <li><a href="https://upphandling24.se/pausar-i-vantan-pa-kkv/">Pausar i väntan på KKV</a> (Upphandling24)</li>
+        <li><a href="https://upphandling24.se/kommuner-tar-strid-om-villkor/">Kommuner tar strid om villkor</a> (Upphandling24)</li>
+        <li><a href="https://www.kostochnaring.se/vart-arbete/upphandling/branschoverenskommelse-livsmedelsupphandling/">Branschöverenskommelse för upphandling av livsmedel</a> (Kost &amp; Näring)</li>
+        <li><a href="https://www.upphandlingsmyndigheten.se/frageportalen/1678643/prisjustering-utover-avtalsenliga-indexjusteringar/">Får man göra prisjusteringar utöver avtalsenliga indexjusteringar?</a> (Upphandlingsmyndigheten)</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
